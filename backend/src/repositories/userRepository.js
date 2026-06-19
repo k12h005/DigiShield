@@ -1,24 +1,17 @@
-// Internal mock storage for hackathon demonstration
-// This will be replaced by Sequelize models in production.
-let users = [];
+const FileDB = require('../utils/fileDB');
+const userDB = new FileDB('users');
 
 class UserRepository {
   async findByEmail(email) {
-    return users.find(u => u.email === email);
+    return await userDB.findUnique({ email });
   }
 
   async findById(id) {
-    return users.find(u => u.id === id);
+    return await userDB.findUnique({ id });
   }
 
   async create(userData) {
-    const newUser = {
-      id: Date.now().toString(),
-      createdAt: new Date(),
-      ...userData
-    };
-    users.push(newUser);
-    return newUser;
+    return await userDB.create(userData);
   }
 }
 

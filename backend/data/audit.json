@@ -1,0 +1,432 @@
+[
+  {
+    "id": "9781245b-b8d1-45ab-b0c1-dc1d50b9cfb1",
+    "createdAt": "2026-06-19T12:46:23.981Z",
+    "updatedAt": "2026-06-19T12:46:23.981Z",
+    "action": "POST /api/auth/register",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/auth/register",
+    "status": 201
+  },
+  {
+    "id": "81487577-d0ee-4c02-b030-c516a125615b",
+    "createdAt": "2026-06-19T12:46:24.185Z",
+    "updatedAt": "2026-06-19T12:46:24.185Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 200
+  },
+  {
+    "id": "2a20824a-dbe1-401a-b8d4-752eb79c7ef9",
+    "createdAt": "2026-06-19T12:46:24.248Z",
+    "updatedAt": "2026-06-19T12:46:24.248Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 200
+  },
+  {
+    "id": "4597256e-7302-409a-b007-54c21781e1e4",
+    "createdAt": "2026-06-19T12:46:24.296Z",
+    "updatedAt": "2026-06-19T12:46:24.296Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "d2c77c1c-f0ee-46ca-99e6-d211859208ec",
+    "createdAt": "2026-06-19T12:46:24.363Z",
+    "updatedAt": "2026-06-19T12:46:24.363Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "16f0435e-8d8b-422e-b8e8-c384d1a82e21",
+    "createdAt": "2026-06-19T12:46:49.232Z",
+    "updatedAt": "2026-06-19T12:46:49.233Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/analytics",
+    "status": 200
+  },
+  {
+    "id": "7031c88c-4e8c-4807-8921-cca4511b89e8",
+    "createdAt": "2026-06-19T12:46:49.289Z",
+    "updatedAt": "2026-06-19T12:46:49.289Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/analytics",
+    "status": 304
+  },
+  {
+    "id": "ca115676-8c29-4b98-82a4-3ee9fabb325a",
+    "createdAt": "2026-06-19T12:46:52.147Z",
+    "updatedAt": "2026-06-19T12:46:52.147Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 200
+  },
+  {
+    "id": "496f730e-6c2d-4875-b1cb-5a44ea859cbe",
+    "createdAt": "2026-06-19T12:46:52.206Z",
+    "updatedAt": "2026-06-19T12:46:52.206Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "f675f4c4-80ab-4c55-b2b9-bde3b4b7fd38",
+    "createdAt": "2026-06-19T12:46:56.034Z",
+    "updatedAt": "2026-06-19T12:46:56.034Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "fd47bbdf-b285-4e79-a039-d71046960183",
+    "createdAt": "2026-06-19T12:46:56.091Z",
+    "updatedAt": "2026-06-19T12:46:56.091Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "a903f7b7-23fa-457c-91cb-cd6cd14892c0",
+    "createdAt": "2026-06-19T12:47:08.692Z",
+    "updatedAt": "2026-06-19T12:47:08.692Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "587bb230-d139-4e74-ba70-b2ac1b822dec",
+    "createdAt": "2026-06-19T12:47:08.752Z",
+    "updatedAt": "2026-06-19T12:47:08.752Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "e7e35d4a-7fe9-40c9-9774-af0004c62daf",
+    "createdAt": "2026-06-19T12:47:10.169Z",
+    "updatedAt": "2026-06-19T12:47:10.173Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/analytics",
+    "status": 304
+  },
+  {
+    "id": "8546abbe-5316-4fe5-80c0-bc1a67a6b45a",
+    "createdAt": "2026-06-19T12:47:10.282Z",
+    "updatedAt": "2026-06-19T12:47:10.282Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/analytics",
+    "status": 304
+  },
+  {
+    "id": "a08c7cd8-5e90-43ac-99e3-4f5d2c3f6f92",
+    "createdAt": "2026-06-19T12:47:16.959Z",
+    "updatedAt": "2026-06-19T12:47:16.959Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "4ba23000-05b3-466a-8c6e-d94d7bc30ce9",
+    "createdAt": "2026-06-19T12:47:16.992Z",
+    "updatedAt": "2026-06-19T12:47:16.992Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "dc9f8a01-b303-4080-b9bf-978f6d001af8",
+    "createdAt": "2026-06-19T12:47:17.013Z",
+    "updatedAt": "2026-06-19T12:47:17.013Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "ab512250-f4e6-4b8e-91ce-cc0ee0e803af",
+    "createdAt": "2026-06-19T12:47:17.026Z",
+    "updatedAt": "2026-06-19T12:47:17.026Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "094823d0-e9e7-46f3-848d-83e33420b569",
+    "createdAt": "2026-06-19T12:47:32.948Z",
+    "updatedAt": "2026-06-19T12:47:32.948Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "04f12eba-073e-4592-b005-c4a227b512d1",
+    "createdAt": "2026-06-19T12:47:32.980Z",
+    "updatedAt": "2026-06-19T12:47:32.980Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "cd279c49-24c6-4252-af16-f2f0675e27c9",
+    "createdAt": "2026-06-19T12:47:33.017Z",
+    "updatedAt": "2026-06-19T12:47:33.017Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "01c31a82-479f-45e1-93f4-66e3056f7135",
+    "createdAt": "2026-06-19T12:47:33.113Z",
+    "updatedAt": "2026-06-19T12:47:33.114Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "dfc54bd8-6bbf-4116-b8ae-1f360336282d",
+    "createdAt": "2026-06-19T12:47:33.142Z",
+    "updatedAt": "2026-06-19T12:47:33.142Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/analytics",
+    "status": 304
+  },
+  {
+    "id": "4b0aedb4-c312-4ad4-8a50-34bf6a60de9e",
+    "createdAt": "2026-06-19T12:47:33.184Z",
+    "updatedAt": "2026-06-19T12:47:33.184Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/analytics",
+    "status": 304
+  },
+  {
+    "id": "6992901c-6cb8-4f3f-a802-d1a1674a858d",
+    "createdAt": "2026-06-19T12:47:35.565Z",
+    "updatedAt": "2026-06-19T12:47:35.565Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "781c58c2-cb05-4e4c-9546-cca4416947ed",
+    "createdAt": "2026-06-19T12:47:35.644Z",
+    "updatedAt": "2026-06-19T12:47:35.644Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "34731e7d-2539-431a-89c1-b0d9148fbaf7",
+    "createdAt": "2026-06-19T12:47:35.681Z",
+    "updatedAt": "2026-06-19T12:47:35.681Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "ec572f27-b8cf-4dc2-8cac-817f7ef51ea0",
+    "createdAt": "2026-06-19T12:47:35.753Z",
+    "updatedAt": "2026-06-19T12:47:35.753Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "8e4caf40-0e0e-4aca-baaa-1bd518602014",
+    "createdAt": "2026-06-19T12:47:37.286Z",
+    "updatedAt": "2026-06-19T12:47:37.286Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "4a4b7458-4462-43fe-a23e-906dfcbeb8f8",
+    "createdAt": "2026-06-19T12:47:37.406Z",
+    "updatedAt": "2026-06-19T12:47:37.406Z",
+    "action": "GET /api/breaches",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches",
+    "status": 304
+  },
+  {
+    "id": "3933676c-b90f-4116-99dd-f4ad3aad6ff3",
+    "createdAt": "2026-06-19T12:47:39.026Z",
+    "updatedAt": "2026-06-19T12:47:39.027Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::ffff:127.0.0.1",
+    "resource": "/api/breaches/analytics",
+    "status": 304
+  },
+  {
+    "id": "0930d459-fb13-4236-8e84-47c3b4aeb330",
+    "createdAt": "2026-06-19T12:47:39.056Z",
+    "updatedAt": "2026-06-19T12:47:39.056Z",
+    "action": "GET /api/breaches/analytics",
+    "userId": null,
+    "ip": "::ffff:127.0.0.1",
+    "resource": "/api/breaches/analytics",
+    "status": 304
+  },
+  {
+    "id": "0a1b44d5-9001-41c0-9723-fbd2cc6d9889",
+    "createdAt": "2026-06-19T12:47:39.417Z",
+    "updatedAt": "2026-06-19T12:47:39.417Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::ffff:127.0.0.1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "5d23e15d-56cd-4356-b2ef-24929ac8fa83",
+    "createdAt": "2026-06-19T12:47:39.476Z",
+    "updatedAt": "2026-06-19T12:47:39.476Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::ffff:127.0.0.1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "ddb9538e-5ceb-4eb5-a311-15e0341041ab",
+    "createdAt": "2026-06-19T12:47:39.532Z",
+    "updatedAt": "2026-06-19T12:47:39.533Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::ffff:127.0.0.1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "657d7934-fb1d-478a-aaba-87e6459ead16",
+    "createdAt": "2026-06-19T12:47:39.596Z",
+    "updatedAt": "2026-06-19T12:47:39.596Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::ffff:127.0.0.1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "322fc225-44a5-4fd0-9e08-8cfc7f08ba01",
+    "createdAt": "2026-06-19T12:47:51.461Z",
+    "updatedAt": "2026-06-19T12:47:51.461Z",
+    "action": "POST /api/auth/login",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/auth/login",
+    "status": 200
+  },
+  {
+    "id": "c3bf04a6-e144-4f06-b276-eacba5861129",
+    "createdAt": "2026-06-19T12:47:51.547Z",
+    "updatedAt": "2026-06-19T12:47:51.547Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "1dfb0bf1-a496-4703-9cbf-a689652ba97b",
+    "createdAt": "2026-06-19T12:47:51.609Z",
+    "updatedAt": "2026-06-19T12:47:51.609Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "0004afce-1243-48dc-84f7-9c27e7faabc5",
+    "createdAt": "2026-06-19T12:47:51.653Z",
+    "updatedAt": "2026-06-19T12:47:51.653Z",
+    "action": "GET /api/breaches/dashboard",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/breaches/dashboard",
+    "status": 304
+  },
+  {
+    "id": "1f018f1f-7f8a-4e28-bb06-dcf423802102",
+    "createdAt": "2026-06-19T12:47:51.696Z",
+    "updatedAt": "2026-06-19T12:47:51.696Z",
+    "action": "GET /api/alerts",
+    "userId": "637b19d1-5dcb-427e-9247-1fe66dfa0e5c",
+    "ip": "::1",
+    "resource": "/api/alerts",
+    "status": 304
+  },
+  {
+    "id": "3c008771-f9de-4293-9436-87dfdd468f1d",
+    "createdAt": "2026-06-19T12:48:03.977Z",
+    "updatedAt": "2026-06-19T12:48:03.977Z",
+    "action": "POST /api/auth/login",
+    "userId": null,
+    "ip": "::1",
+    "resource": "/api/auth/login",
+    "status": 500
+  }
+]

@@ -2,12 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const dotenv = require('dotenv');
 const { errorHandler } = require('./middleware/errorMiddleware');
 const { logger } = require('./middleware/loggerMiddleware');
 
 // Load environment variables
-dotenv.config();
 
 const app = express();
 
@@ -33,8 +31,7 @@ app.use('/api/', limiter);
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/assets', require('./routes/assetRoutes'));
 app.use('/api/alerts', require('./routes/alertRoutes'));
-app.use('/api/intelligence', require('./routes/intelligenceRoutes'));
-app.use('/api/analytics', require('./routes/analyticsRoutes'));
+app.use('/api/breaches', require('./routes/breachRoutes'));
 
 // Root endpoint
 app.get('/', (req, res) => {

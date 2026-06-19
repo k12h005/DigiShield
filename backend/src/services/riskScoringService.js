@@ -1,18 +1,28 @@
 class RiskScoringService {
   constructor() {
     this.weights = {
-      password: 40,
-      phone: 20,
-      address: 20,
-      financial: 50,
-      default: 10
+      'Passwords': 50,
+      'Email addresses': 20,
+      'Phone numbers': 30,
+      'Physical addresses': 40,
+      'Bank account numbers': 60,
+      'Credit cards': 70,
+      'Names': 5,
+      'Dates of birth': 15,
+      'IP addresses': 10,
+      'Usernames': 10,
+      'default': 10
     };
   }
 
   calculateScore(exposedDataTypes) {
     let score = 0;
     exposedDataTypes.forEach(type => {
-      score += this.weights[type] || this.weights.default;
+      // Direct match or partial match for case sensitivity
+      const matchedWeight = this.weights[type] || 
+                           this.weights[Object.keys(this.weights).find(k => k.toLowerCase() === type.toLowerCase())] || 
+                           this.weights.default;
+      score += matchedWeight;
     });
 
     return {

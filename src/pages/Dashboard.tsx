@@ -32,25 +32,41 @@ const chartData = [
   { name: 'Jun', breaches: 12 },
 ];
 
+interface StatItem {
+  label: string;
+  value: string | number;
+  icon: React.ElementType;
+  change: string;
+  trend: 'up' | 'down' | 'neutral';
+}
+
+interface AlertItem {
+  asset: string;
+  source: string;
+  severity: 'High' | 'Medium' | 'Low';
+  date: string;
+  status: 'pending' | 'resolved';
+}
+
 const Dashboard: React.FC = () => {
-  const [stats, setStats] = useState<any[]>([]);
-  const [alerts, setAlerts] = useState<any[]>([]);
+  const [stats, setStats] = useState<StatItem[]>([]);
+  const [alerts, setAlerts] = useState<AlertItem[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [statsRes, alertsRes] = await Promise.all([
-          api.get('/analytics/stats'),
+          api.get('/breaches/dashboard'),
           api.get('/alerts')
         ]);
 
         const rawStats = statsRes.data;
         setStats([
-          { label: 'Total Assets', value: rawStats.totalAssets, icon: Users, change: '+2', trend: 'up' },
-          { label: 'Breaches Found', value: '12', icon: ShieldAlert, change: '+1', trend: 'up' },
-          { label: 'Risk Score', value: rawStats.riskScore, icon: Activity, change: '-5', trend: 'down' },
-          { label: 'Active Alerts', value: rawStats.totalAlerts, icon: AlertTriangle, change: '0', trend: 'neutral' },
+          { label: 'Intelligence Records', value: rawStats.totalIntelligenceRecords, icon: Users, change: '+5', trend: 'up' },
+          { label: 'Impact Estimate', value: (rawStats.globalImpactEstimate / 1000000).toFixed(0) + 'M', icon: ShieldAlert, change: '+12%', trend: 'up' },
+          { label: 'Critical Threats', value: rawStats.criticalAlertsActive, icon: Activity, change: 'NEW', trend: 'down' },
+          { label: 'Active Alerts', value: alertsRes.data.length, icon: AlertTriangle, change: '0', trend: 'neutral' },
         ]);
 
         setAlerts(alertsRes.data);

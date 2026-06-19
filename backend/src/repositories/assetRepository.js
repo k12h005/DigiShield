@@ -1,40 +1,25 @@
-let assets = [];
+const FileDB = require('../utils/fileDB');
+const assetDB = new FileDB('assets');
 
 class AssetRepository {
   async findAllByUserId(userId) {
-    return assets.filter(a => a.userId === userId);
+    return await assetDB.findMany({ userId });
   }
 
   async findById(id) {
-    return assets.find(a => a.id === id);
+    return await assetDB.findUnique({ id });
   }
 
   async create(assetData) {
-    const newAsset = {
-      id: Date.now().toString(),
-      createdAt: new Date(),
-      ...assetData
-    };
-    assets.push(newAsset);
-    return newAsset;
-  }
-
-  async update(id, updateData) {
-    const index = assets.findIndex(a => a.id === id);
-    if (index !== -1) {
-      assets[index] = { ...assets[index], ...updateData };
-      return assets[index];
-    }
-    return null;
+    return await assetDB.create(assetData);
   }
 
   async delete(id) {
-    const index = assets.findIndex(a => a.id === id);
-    if (index !== -1) {
-      assets.splice(index, 1);
-      return true;
-    }
-    return false;
+    return await assetDB.delete(id);
+  }
+
+  async updateLastChecked(id) {
+    return await assetDB.update(id, { lastChecked: new Date().toISOString() });
   }
 }
 
