@@ -1,183 +1,305 @@
-import React, { useEffect, useState } from 'react';
-import { ExternalLink, ShieldCheck, Bookmark, Search, BookOpen, AlertTriangle, Loader2 } from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import {
+  ExternalLink,
+  ShieldCheck,
+  Search,
+  BookOpen,
+  AlertTriangle,
+  Loader2,
+  Plus,
+  ChevronRight,
+  X,
+} from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
+import IntelResyncButton from '../components/IntelResyncButton';
 
 interface Breach {
-    Name: string;
-    Title: string;
-    Domain: string;
-    BreachDate: string;
-    Description: string;
-    DataClasses: string[];
-    PwnCount: number;
-    LogoPath: string;
+  Name: string;
+  Title: string;
+  Domain: string;
+  BreachDate: string;
+  AddedDate?: string;
+  Description: string;
+  DataClasses: string[];
+  PwnCount: number;
+  LogoPath?: string;
+  IsVerified?: boolean;
+}
+
+interface LegalItem {
+  framework: string;
+  guidance: string;
 }
 
 const LegalIntelligence: React.FC = () => {
-    const [advisories, setAdvisories] = useState<Breach[]>([]);
-    const [searchQuery, setSearchQuery] = useState('');
-    const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+  const [records, setRecords] = useState<Breach[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [visibleCount, setVisibleCount] = useState(12);
+  const [selected, setSelected] = useState<Breach | null>(null);
+  const [tracking, setTracking] = useState<string | null>(null);
+  const [legalGuidance, setLegalGuidance] = useState<LegalItem[]>([]);
+  const [refreshKey, setRefreshKey] = useState(0);
 
-    const filteredAdvisories = React.useMemo(() => {
-        return advisories.filter(adv => 
-            adv.Title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (adv.Domain && adv.Domain.toLowerCase().includes(searchQuery.toLowerCase())) ||
-            adv.Description.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-    }, [searchQuery, advisories]);
-
-    useEffect(() => {
-        const fetchBreaches = async () => {
-            try {
-                const response = await api.get('/breaches');
-                setAdvisories(response.data);
-            } catch (err) {
-                console.error('Failed to fetch breaches', err);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchBreaches();
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="h-[80vh] flex items-center justify-center">
-                <Loader2 className="w-10 h-10 text-primary animate-spin" />
-            </div>
-        );
+  const loadRecords = async () => {
+    setLoading(true);
+    try {
+      const response = await api.get('/breaches/recent?limit=100');
+      setRecords(response.data);
+    } catch (err) {
+      console.error('Failed to fetch breaches', err);
+    } finally {
+      setLoading(false);
     }
+  };
 
-    return (
-        <div className="space-y-8">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                    <h1 className="text-3xl font-bold text-text">Threat Intelligence Hub</h1>
-                    <p className="text-text-muted mt-1">Global breach catalog and incident reports.</p>
-                </div>
-                <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
-                    <input 
-                        type="text" 
-                        placeholder="Search breaches (e.g. Adobe)..." 
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="bg-white border border-gray-200 rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary outline-none w-full sm:w-64 shadow-sm" 
-                    />
-                </div>
-            </div>
+  useEffect(() => {
+    loadRecords();
+  }, [refreshKey]);
 
-            <div className="grid lg:grid-cols-3 gap-8">
-                {/* Breach Catalog */}
-                <div className="lg:col-span-2 space-y-6">
-                    <section>
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="flex items-center gap-2">
-                                <AlertTriangle className="w-5 h-5 text-primary" />
-                                <h2 className="text-xl font-bold text-text">Intelligence Records</h2>
-                            </div>
-                            <span className="text-sm font-bold text-text-muted">
-                                {searchQuery ? `Showing ${filteredAdvisories.length} results` : `Total: ${advisories.length} records`}
-                            </span>
-                        </div>
-                        <div className="space-y-4">
-                            {filteredAdvisories.length > 0 ? filteredAdvisories.slice(0, 50).map((adv) => (
-                                <div key={adv.Name} className="card p-5 group cursor-pointer hover:bg-secondary/50 transition-colors">
-                                    <div className="flex items-start justify-between">
-                                        <div className="space-y-2">
-                                            <span className="text-xs font-bold text-primary font-mono">{adv.Domain || 'General Breach'}</span>
-                                            <h3 className="font-bold text-text group-hover:text-primary transition-colors underline decoration-transparent group-hover:decoration-primary">{adv.Title}</h3>
-                                            <p className="text-sm text-text-muted leading-relaxed line-clamp-3" dangerouslySetInnerHTML={{ __html: adv.Description }} />
-                                            <div className="flex flex-wrap gap-2 mt-3">
-                                                {adv.DataClasses.slice(0, 5).map((dc: string) => (
-                                                    <span key={dc} className="px-2 py-0.5 bg-gray-100 rounded text-[10px] font-bold text-gray-600">{dc}</span>
-                                                ))}
-                                                {adv.DataClasses.length > 5 && (
-                                                    <span className="px-2 py-0.5 bg-gray-50 rounded text-[10px] font-bold text-gray-400">+{adv.DataClasses.length - 5} more</span>
-                                                )}
-                                            </div>
-                                        </div>
-                                        <div className="text-right min-w-[100px]">
-                                            <p className="text-xs font-bold text-text-muted uppercase mb-1">Breach Date</p>
-                                            <p className="text-sm font-bold text-text">{new Date(adv.BreachDate).toLocaleDateString()}</p>
-                                            <div className="mt-4">
-                                                <p className="text-xs font-bold text-text-muted uppercase mb-1">Impact</p>
-                                                <p className="text-sm font-black text-primary">{(adv.PwnCount / 1000000).toFixed(1)}M</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="mt-4 flex items-center gap-4">
-                                        <button className="text-xs font-bold text-text-muted hover:text-text flex items-center gap-1">
-                                            <ExternalLink className="w-3.5 h-3.5" /> Investigation Details
-                                        </button>
-                                        <button className="text-xs font-bold text-text-muted hover:text-text flex items-center gap-1">
-                                            <Bookmark className="w-3.5 h-3.5" /> Track Incident
-                                        </button>
-                                    </div>
-                                </div>
-                            )) : (
-                                <div className="text-center py-20 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
-                                    <Search className="w-10 h-10 text-gray-300 mx-auto mb-4" />
-                                    <p className="text-text-muted font-medium">No records matching "{searchQuery}"</p>
-                                </div>
-                            )}
-                        </div>
-                        {filteredAdvisories.length > 50 && (
-                            <button className="w-full mt-6 py-3 border-2 border-dashed border-gray-100 rounded-xl text-sm font-bold text-text-muted hover:border-primary/50 hover:text-primary transition-all">
-                                Load More Records (Showing 50 of {filteredAdvisories.length})
-                            </button>
-                        )}
-                    </section>
-                </div>
+  useEffect(() => {
+    if (selected?.DataClasses?.length) {
+      api.get('/intelligence/legal', { params: { dataClasses: selected.DataClasses.join(',') } })
+        .then((res) => setLegalGuidance(res.data))
+        .catch(() => setLegalGuidance([]));
+    }
+  }, [selected]);
 
-                {/* Frameworks and Guides */}
-                <div className="space-y-6">
-                    <div className="card">
-                        <div className="flex items-center gap-2 mb-4">
-                            <BookOpen className="w-5 h-5 text-primary" />
-                            <h2 className="font-bold text-text">Compliance Guidance</h2>
-                        </div>
-                        <div className="space-y-4">
-                            {[
-                                "Digital Personal Data Protection Act (DPDP)",
-                                "IT (Intermediary Guidelines) Rules",
-                                "RBI Cybersecurity Framework",
-                                "CERT-In Cyber Guidelines 2024"
-                            ].map((guide, i) => (
-                                <a key={i} href="#" className="flex items-center justify-between p-3 rounded-lg hover:bg-secondary transition-colors group">
-                                    <span className="text-sm font-semibold text-text group-hover:text-primary">{guide}</span>
-                                    <ChevronRight className="w-4 h-4 text-text-muted" />
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="card bg-secondary/30 border-none">
-                        <div className="flex items-center gap-2 mb-4">
-                            <ShieldCheck className="w-5 h-5 text-green-600" />
-                            <h2 className="font-bold text-text">Security Intelligence</h2>
-                        </div>
-                        <ul className="space-y-4">
-                            {[
-                                { t: "Active Monitoring", d: "Continuous scans against HIBP database." },
-                                { t: "Identity Lockdown", d: "Real-time alerts for domain exposures." },
-                                { t: "Risk Scoring", d: "Impact assessment based on DataClasses." }
-                            ].map((item, i) => (
-                                <li key={i}>
-                                    <h4 className="text-sm font-bold text-text mb-1">{item.t}</h4>
-                                    <p className="text-xs text-text-muted">{item.d}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+  const filtered = useMemo(() => {
+    return records.filter((adv) =>
+      adv.Title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      adv.Domain?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      adv.Description?.toLowerCase().includes(searchQuery.toLowerCase())
     );
-};
+  }, [searchQuery, records]);
 
-const ChevronRight = ({ className }: { className?: string }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-);
+  const handleTrackDomain = async (domain: string, name: string) => {
+    if (!domain) return;
+    setTracking(name);
+    try {
+      await api.post('/assets', { type: 'domain', value: domain });
+      navigate('/monitoring');
+    } catch (err) {
+      console.error('Track failed', err);
+      alert('Could not add domain — it may already be monitored.');
+    } finally {
+      setTracking(null);
+    }
+  };
+
+  if (loading && records.length === 0) {
+    return (
+      <div className="h-[80vh] flex items-center justify-center">
+        <Loader2 className="w-10 h-10 text-primary animate-spin" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold text-text">Threat Intelligence Hub</h1>
+          <p className="text-text-muted mt-1 text-sm font-mono">HIBP verified corpus · domain exposure matching</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <IntelResyncButton onDone={() => setRefreshKey((k) => k + 1)} />
+          <div className="relative w-full lg:w-64">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+          <input
+            type="text"
+            placeholder="Search Adobe, LinkedIn..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="input-field pl-10"
+          />
+          </div>
+        </div>
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 space-y-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-primary" />
+              <h2 className="text-lg font-bold text-text">Latest Intelligence Records</h2>
+            </div>
+            <span className="text-xs font-mono text-text-muted">
+              {filtered.length} records
+            </span>
+          </div>
+
+          {filtered.slice(0, visibleCount).map((adv) => (
+            <div key={adv.Name} className="card p-5 hover:border-primary/20 transition-all">
+              <div className="flex gap-4">
+                {adv.LogoPath ? (
+                  <img src={adv.LogoPath} alt="" className="w-12 h-12 rounded-xl object-contain bg-gray-50 border border-gray-100 shrink-0" />
+                ) : (
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-6 h-6 text-primary" />
+                  </div>
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <span className="text-xs font-bold text-primary font-mono">{adv.Domain || 'general'}</span>
+                    {adv.IsVerified && (
+                      <span className="text-[10px] font-bold uppercase bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Verified</span>
+                    )}
+                    {adv.AddedDate && (
+                      <span className="text-[10px] text-text-muted">Added {new Date(adv.AddedDate).toLocaleDateString()}</span>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-text text-lg">{adv.Title}</h3>
+                  <p className="text-sm text-text-muted line-clamp-2 mt-1" dangerouslySetInnerHTML={{ __html: adv.Description }} />
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {adv.DataClasses?.slice(0, 4).map((dc) => (
+                      <span key={dc} className="px-2 py-0.5 bg-gray-100 rounded text-[10px] font-bold text-gray-600">{dc}</span>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-3 mt-4">
+                    <button
+                      onClick={() => setSelected(adv)}
+                      className="text-xs font-bold text-primary hover:text-primary-hover flex items-center gap-1"
+                    >
+                      Investigation Details <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
+                    {adv.Domain && (
+                      <button
+                        disabled={tracking === adv.Name}
+                        onClick={() => handleTrackDomain(adv.Domain, adv.Name)}
+                        className="text-xs font-bold text-text-muted hover:text-text flex items-center gap-1 disabled:opacity-50"
+                      >
+                        <Plus className="w-3.5 h-3.5" />
+                        {tracking === adv.Name ? 'Adding...' : 'Monitor Domain'}
+                      </button>
+                    )}
+                    <a
+                      href={`https://haveibeenpwned.com/PwnedWebsites#${adv.Name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-text-muted hover:text-text flex items-center gap-1"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" /> HIBP Source
+                    </a>
+                  </div>
+                </div>
+                <div className="text-right shrink-0 hidden sm:block">
+                  <p className="text-[10px] font-bold text-text-muted uppercase">Impact</p>
+                  <p className="text-lg font-black text-primary">{(adv.PwnCount / 1000000).toFixed(1)}M</p>
+                  <p className="text-xs text-text-muted mt-2">{new Date(adv.BreachDate).toLocaleDateString()}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {filtered.length === 0 && (
+            <div className="card text-center py-16 text-text-muted">No records match your search.</div>
+          )}
+
+          {visibleCount < filtered.length && (
+            <button
+              onClick={() => setVisibleCount((c) => c + 12)}
+              className="w-full py-3 border-2 border-dashed border-gray-200 rounded-xl text-sm font-bold text-text-muted hover:border-primary/40 hover:text-primary transition-all"
+            >
+              Load More ({visibleCount} of {filtered.length})
+            </button>
+          )}
+        </div>
+
+        <div className="space-y-4">
+          <div className="card">
+            <div className="flex items-center gap-2 mb-4">
+              <BookOpen className="w-5 h-5 text-primary" />
+              <h2 className="font-bold text-text">Compliance Frameworks</h2>
+            </div>
+            <div className="space-y-3">
+              {[
+                'Digital Personal Data Protection Act (DPDP)',
+                'CERT-In Cyber Guidelines 2024',
+                'IT Act 2000 — Section 43A',
+                'RBI Cybersecurity Framework',
+              ].map((guide) => (
+                <button
+                  key={guide}
+                  onClick={() => navigate('/alerts')}
+                  className="w-full flex items-center justify-between p-3 rounded-xl hover:bg-gray-50 transition-colors text-left group"
+                >
+                  <span className="text-sm font-semibold text-text group-hover:text-primary">{guide}</span>
+                  <ChevronRight className="w-4 h-4 text-text-muted" />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="card bg-gradient-to-br from-primary/5 to-orange-50 border-primary/10">
+            <ShieldCheck className="w-8 h-8 text-primary mb-3" />
+            <h3 className="font-bold text-text mb-2">How to demo live data</h3>
+            <p className="text-sm text-text-muted leading-relaxed">
+              Click <strong>Monitor Domain</strong> on any record, then check Alerts for instant exposure matches against your assets.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {selected && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6">
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <p className="text-xs font-bold text-primary uppercase">{selected.Domain}</p>
+                <h2 className="text-2xl font-bold text-text mt-1">{selected.Title}</h2>
+              </div>
+              <button onClick={() => setSelected(null)} className="p-2 hover:bg-gray-100 rounded-lg">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="prose prose-sm max-w-none text-text-muted mb-6" dangerouslySetInnerHTML={{ __html: selected.Description }} />
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <div className="bg-gray-50 rounded-xl p-4">
+                <p className="text-xs font-bold text-text-muted uppercase">Records Exposed</p>
+                <p className="text-2xl font-black text-primary">{(selected.PwnCount / 1000000).toFixed(1)}M</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4">
+                <p className="text-xs font-bold text-text-muted uppercase">Breach Date</p>
+                <p className="text-lg font-bold text-text">{new Date(selected.BreachDate).toLocaleDateString()}</p>
+              </div>
+            </div>
+            {legalGuidance.length > 0 && (
+              <div className="space-y-3 mb-6">
+                <h4 className="font-bold text-text">Legal Guidance</h4>
+                {legalGuidance.map((item) => (
+                  <div key={item.framework} className="bg-secondary/60 rounded-xl p-3">
+                    <p className="text-xs font-bold text-primary">{item.framework}</p>
+                    <p className="text-sm text-text-muted mt-1">{item.guidance}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            <div className="flex gap-3">
+              {selected.Domain && (
+                <button
+                  onClick={() => { handleTrackDomain(selected.Domain, selected.Name); setSelected(null); }}
+                  className="btn-primary flex-1"
+                >
+                  Monitor This Domain
+                </button>
+              )}
+              <a
+                href={`https://haveibeenpwned.com/PwnedWebsites#${selected.Name}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center py-2 border border-gray-200 rounded-lg font-semibold text-text hover:bg-gray-50"
+              >
+                View on HIBP
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default LegalIntelligence;

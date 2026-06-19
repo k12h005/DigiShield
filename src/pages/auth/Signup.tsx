@@ -9,7 +9,7 @@ const Signup: React.FC = () => {
     lastName: '',
     email: '',
     password: '',
-    role: 'citizen'
+    role: 'individual'
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -127,7 +127,7 @@ const Signup: React.FC = () => {
             onChange={handleChange} 
             className="input-field appearance-none"
           >
-            <option value="citizen">Citizen</option>
+            <option value="individual">Citizen</option>
             <option value="legal">Legal Professional</option>
             <option value="government">Government Official</option>
           </select>

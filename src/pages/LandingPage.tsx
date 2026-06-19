@@ -19,7 +19,7 @@ const LandingPage: React.FC = () => {
           <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
             <ShieldCheck className="text-white w-5 h-5" />
           </div>
-          <span className="font-bold text-xl text-text tracking-tight">CyberGuard</span>
+          <span className="font-bold text-xl text-text tracking-tight">DigiShield</span>
         </div>
         
         <div className="hidden md:flex items-center gap-8">
@@ -156,7 +156,7 @@ const LandingPage: React.FC = () => {
                 </div>
              </div>
              <p className="text-text-muted italic text-lg leading-relaxed mb-6">
-               "CyberGuard provides the essential bridge between technical exposure and legal recourse, making it indispensable for modern digital safety."
+               "DigiShield provides the essential bridge between technical exposure and legal recourse, making it indispensable for modern digital safety."
              </p>
              <div className="h-1 bg-primary w-12 rounded-full"></div>
           </div>
@@ -171,7 +171,7 @@ const LandingPage: React.FC = () => {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <ShieldCheck className="text-white w-5 h-5" />
               </div>
-              <span className="font-bold text-xl text-text tracking-tight">CyberGuard</span>
+              <span className="font-bold text-xl text-text tracking-tight">DigiShield</span>
             </div>
             <p className="text-text-muted max-w-sm mb-8">
               Protecting the digital lives of Indian citizens through advanced intelligence and proactive monitoring.
@@ -196,7 +196,7 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-50 text-center text-text-muted text-sm">
-          © {new Date().getFullYear()} CyberGuard. All rights reserved. Professional Real-time Cyber Intelligence Platform.
+          © {new Date().getFullYear()} DigiShield. All rights reserved. Professional Real-time Cyber Intelligence Platform.
         </div>
       </footer>
     </div>

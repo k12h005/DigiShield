@@ -5,6 +5,7 @@ import {
     PieChart, Pie, Cell,
     XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
+import { Link } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 import api from '../services/api';
 
@@ -15,11 +16,17 @@ interface DataPoint {
     value: number;
 }
 
+interface TrendPoint {
+    name: string;
+    count: number;
+}
+
 interface AnalyticsData {
     mostCommonData: DataPoint[];
     severityDistribution: DataPoint[];
     totalBreaches: number;
     totalPwnCount: number;
+    monthlyTrend?: TrendPoint[];
 }
 
 const Analytics: React.FC = () => {
@@ -48,14 +55,17 @@ const Analytics: React.FC = () => {
         );
     }
 
-    const breachTrendData = [
-        { name: 'Jul', count: 1 },
-        { name: 'Aug', count: 4 },
-        { name: 'Sep', count: 2 },
-        { name: 'Oct', count: 8 },
-        { name: 'Nov', count: 5 },
-        { name: 'Dec', count: 12 },
-    ];
+    if (!analytics) {
+        return (
+            <div className="card text-center py-20 text-text-muted">
+                Unable to load analytics. Start the Python backend and sync breach intelligence first.
+            </div>
+        );
+    }
+
+    const breachTrendData = analytics.monthlyTrend?.length
+        ? analytics.monthlyTrend
+        : [{ name: 'N/A', count: 0 }];
 
     return (
         <div className="space-y-8">
@@ -146,7 +156,9 @@ const Analytics: React.FC = () => {
                          <strong className="text-text">Global Impact:</strong> Approximately {(analytics.totalPwnCount / 1000000).toFixed(0)} million accounts exposed across the catalog.
                       </p>
                    </div>
-                   <button className="mt-8 btn-primary self-start">Integrate Custom Intelligence</button>
+                   <Link to="/legal" className="mt-8 btn-primary self-start inline-flex">
+                     Explore Threat Intelligence Hub
+                   </Link>
                 </div>
             </div>
         </div>

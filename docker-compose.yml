@@ -14,22 +14,29 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ./backend-py
     container_name: digishield-api
     restart: always
     environment:
-      DATABASE_URL: postgresql://${DB_USER:-postgres}:${DB_PASSWORD:-password}@postgres:5432/${DB_NAME:-digishield}?schema=public
+      DATABASE_URL: postgresql://${DB_USER:-postgres}:${DB_PASSWORD:-password}@postgres:5432/${DB_NAME:-digishield}
       PORT: 5000
       JWT_SECRET: ${JWT_SECRET:-digishield_super_secret_2026}
+      HMAC_SECRET: ${HMAC_SECRET:-digishield_hmac_pepper_2026}
+      CLIENT_URL: http://localhost
       NODE_ENV: production
+      FALLBACK_BREACHES_PATH: /app/data/breaches.json
     ports:
       - "5000:5000"
+    volumes:
+      - ./backend-py/data/breaches.json:/app/data/breaches.json:ro
     depends_on:
       - postgres
 
   frontend:
     build:
       context: .
+      args:
+        VITE_API_URL: http://localhost:5000/api
     container_name: digishield-ui
     restart: always
     ports:

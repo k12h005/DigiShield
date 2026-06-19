@@ -1,50 +1,40 @@
 # DigiShield
 
-**DigiShield** is a Real-Time Data Breach Alert & Cyber Intelligence Platform built for a Government & Legal Intelligence Hackathon.
+**DigiShield** is a Real-Time Data Breach Alert & Cyber Intelligence Platform for Legal & Government ecosystems.
 
 ## Repository Structure
-- `/`: Frontend application (React + TypeScript + Vite + Tailwind)
-- `/backend`: API Server (Node.js + Express + PostgreSQL architecture)
+- `/`: Frontend (React + TypeScript + Vite + Tailwind)
+- `/backend-py`: Python API (FastAPI + SQLAlchemy + PostgreSQL/SQLite)
 
-## Core Capabilities
-- **Asset Monitoring**: Real-time tracking of emails, phone numbers, and domains.
-- **Threat Intelligence**: Aggregated CERT-In advisories and CVE data.
-- **Risk Scoring**: AI-ready modular engine for calculating account risk levels.
-- **Legal Intelligence**: Role-specific compliance and regulatory guidance.
-- **Role-Based Dashboards**: Tailored experiences for Citizens, Legal Professionals, and Government Organizations.
+## Quick Start (Conda)
 
-## Tech Stack
-- **Frontend**: React, TypeScript, Tailwind CSS, Recharts, Framer Motion, Axios.
-- **Backend**: Node.js, Express, PostgreSQL (Sequelize), JWT.
-
-## Quick Start
-
-### 1. Backend Setup
 ```bash
-cd backend
-npm install
-npm run dev
+conda create -n hackathon python=3.12 -y
+conda activate hackathon
+
+cd backend-py
+pip install -r requirements.txt
+copy .env.example .env
+uvicorn app.main:app --reload --port 5000
 ```
-*Make sure to configure `.env` in the backend folder.*
 
-### 2. Frontend Setup
+In another terminal:
+
 ```bash
-# In the root directory
 npm install
 npm run dev
 ```
 
-## Security Implementation
-- **JWT Authentication**: Secure stateless access.
-- **RBAC**: Strict role-based permissions at API and UI levels.
-- **Audit Logging**: Request tracking for compliance and security monitoring.
-- **Security Headers**: Helmet integration for HTTP protection.
-- **Rate Limiting**: Brute-force protection on authentication routes.
+Demo tip: add a monitored domain like `adobe.com` or `linkedin.com` to trigger real breach alerts.
 
-## Design Philosophy
-- **Clean & Minimal**: Inspired by Google and Notion.
-- **Government Friendly**: White theme, high contrast, professional typography.
-- **Accessible**: WCAG compliant color palettes and semantic HTML.
+## Docker
+
+```bash
+docker compose up --build
+```
+
+- Frontend: http://localhost
+- Backend API: http://localhost:5000/api
 
 ## License
 MIT

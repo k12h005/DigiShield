@@ -4,38 +4,58 @@ import { ShieldAlert } from 'lucide-react';
 
 const AuthLayout: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white flex">
-      {/* Left side - Content */}
-      <div className="flex-1 flex flex-col justify-center px-6 sm:px-12 lg:px-24">
-        <div className="max-w-md w-full mx-auto">
-          <Link to="/" className="flex items-center gap-3 mb-10 group">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center transition-transform group-hover:scale-110">
-              <ShieldAlert className="text-white w-6 h-6" />
+    <div className="min-h-screen lg:min-h-[100dvh] flex flex-col lg:flex-row">
+      {/* Landscape illustration panel */}
+      <div className="relative lg:w-[48%] xl:w-[52%] min-h-[220px] lg:min-h-screen auth-landscape-panel overflow-hidden">
+        <div className="absolute inset-0 auth-gradient-bg" />
+        <div className="absolute inset-0 auth-pattern opacity-40" />
+        <div className="relative z-10 h-full flex flex-col justify-between p-8 lg:p-12">
+          <Link to="/" className="flex items-center gap-3 text-white/90 hover:text-white transition-colors w-fit">
+            <div className="w-11 h-11 bg-white/15 backdrop-blur rounded-2xl flex items-center justify-center border border-white/20">
+              <ShieldAlert className="w-6 h-6 text-white" />
             </div>
-            <span className="font-bold text-2xl text-text tracking-tight">CyberGuard</span>
+            <span className="font-bold text-2xl tracking-tight">DigiShield</span>
           </Link>
-          <Outlet />
+
+          <div className="hidden lg:block max-w-md">
+            <p className="text-white/70 text-sm font-semibold uppercase tracking-widest mb-3">Cyber Intelligence Platform</p>
+            <h2 className="text-4xl xl:text-5xl font-bold text-white leading-tight mb-4">
+              Protect your digital identity in real time.
+            </h2>
+            <p className="text-white/80 text-lg leading-relaxed">
+              Monitor domains, detect breach exposure, and get legal guidance built for citizens, legal teams, and government.
+            </p>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-3">
+            <div className="flex -space-x-2">
+              {['A', 'L', 'G'].map((letter) => (
+                <div key={letter} className="w-9 h-9 rounded-full bg-white/20 border-2 border-white/30 flex items-center justify-center text-xs font-bold text-white">
+                  {letter}
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-white/70">Trusted by legal & government ecosystems</p>
+          </div>
         </div>
+
+        {/* Decorative shapes */}
+        <div className="auth-blob auth-blob-1" />
+        <div className="auth-blob auth-blob-2" />
+        <div className="auth-blob auth-blob-3" />
       </div>
 
-      {/* Right side - Visual */}
-      <div className="hidden lg:flex flex-1 bg-secondary items-center justify-center p-12">
-        <div className="max-w-md text-center">
-          <div className="bg-white p-8 rounded-3xl shadow-xl mb-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
-            <div className="relative">
-              <ShieldAlert className="w-16 h-16 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-text mb-4">Protecting your digital assets</h2>
-              <p className="text-text-muted text-lg">
-                Real-time monitoring and legal intelligence to keep your information secure and compliant.
-              </p>
+      {/* Form panel */}
+      <div className="flex-1 flex items-center justify-center px-6 py-10 lg:py-12 bg-[#FAFAFA]">
+        <div className="w-full max-w-md">
+          <div className="lg:hidden flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+              <ShieldAlert className="text-white w-5 h-5" />
             </div>
+            <span className="font-bold text-xl text-text">DigiShield</span>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="h-2 bg-gray-200 rounded-full"></div>
-            ))}
-            <div className="h-2 bg-primary w-1/2 rounded-full"></div>
+          <div className="bg-white rounded-3xl shadow-xl shadow-gray-200/60 border border-gray-100 p-8 lg:p-10">
+            <Outlet />
           </div>
         </div>
       </div>

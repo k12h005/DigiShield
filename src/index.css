@@ -21,4 +21,43 @@
   .input-field {
     @apply w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all;
   }
+
+  .auth-gradient-bg {
+    background: linear-gradient(145deg, #0f766e 0%, #115e59 35%, #134e4a 70%, #164e63 100%);
+  }
+
+  .auth-pattern {
+    background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12) 0, transparent 45%),
+      radial-gradient(circle at 80% 10%, rgba(249,115,22,0.25) 0, transparent 40%),
+      radial-gradient(circle at 60% 80%, rgba(255,255,255,0.08) 0, transparent 35%);
+  }
+
+  .auth-blob {
+    @apply absolute rounded-full blur-3xl opacity-30 pointer-events-none;
+  }
+
+  .auth-blob-1 {
+    width: 280px;
+    height: 280px;
+    background: #F97316;
+    top: 10%;
+    right: -60px;
+  }
+
+  .auth-blob-2 {
+    width: 200px;
+    height: 200px;
+    background: #5eead4;
+    bottom: 20%;
+    left: -40px;
+  }
+
+  .auth-blob-3 {
+    width: 140px;
+    height: 140px;
+    background: #ffffff;
+    top: 45%;
+    right: 20%;
+    opacity: 0.15;
+  }
 }

@@ -31,9 +31,10 @@ const Login: React.FC = () => {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-text mb-2">Welcome Back</h1>
-        <p className="text-text-muted">Sign in to your account to manage your alerts.</p>
+      <div className="mb-6">
+        <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Welcome back</p>
+        <h1 className="text-2xl font-bold text-text mb-1">Sign in to DigiShield</h1>
+        <p className="text-text-muted text-sm">Monitor breach exposure for legal & government ecosystems.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -95,26 +96,11 @@ const Login: React.FC = () => {
           <label htmlFor="remember" className="text-sm text-text-muted">Remember me for 30 days</label>
         </div>
 
-        <button 
-          type="submit" 
+        <button type="submit" 
           disabled={loading}
           className="w-full btn-primary py-3 flex items-center justify-center gap-2 disabled:opacity-70"
         >
           {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <>Sign In <ArrowRight className="w-5 h-5" /></>}
-        </button>
-
-        <div className="relative my-8">
-            <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-100"></div>
-            </div>
-            <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-white text-text-muted uppercase tracking-wider font-medium">Or continue with</span>
-            </div>
-        </div>
-
-        <button type="button" className="w-full bg-white border border-gray-200 text-text font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-3">
-          <img src="https://www.google.com/favicon.ico" className="w-5 h-5" alt="Google" />
-          Sign in with Google
         </button>
       </form>
 
