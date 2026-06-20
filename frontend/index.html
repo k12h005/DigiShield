@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CyberGuard — Digital Security Platform</title>
-    <!-- Apply stored theme before React mounts to prevent white flash -->
+    <!-- Prevent flash of wrong theme: apply stored theme class before React mounts -->
     <script>
       (function() {
         var t = localStorage.getItem('cg-theme');
