@@ -19,6 +19,12 @@ DigiShield monitors emails and domains against breach intelligence, generates ri
 
 Breach data syncs from the [Have I Been Pwned](https://haveibeenpwned.com/) public corpus on startup and on a configurable schedule, with a local JSON fallback for offline demos.
 
+Regenerate CERT-In style demo advisories (300 records):
+
+```bash
+python scripts/generate_cert_advisories.py
+```
+
 ---
 
 ## Tech stack
@@ -81,6 +87,18 @@ HMAC_SECRET=your_hmac_secret
 
 ## Local development
 
+### Windows (fastest)
+
+From the repo root:
+
+```bat
+start-all.bat      REM backend + frontend in two terminals
+start-backend.bat  REM API  → http://localhost:8000 (uses conda env: digishield)
+start-frontend.bat REM UI   → http://localhost:5173
+```
+
+`start-backend.bat` auto-activates the **`digishield`** Conda env (creates it with Python 3.12 if missing). To use a different env name, edit `CONDA_ENV=` at the top of `start-backend.bat`.
+
 ### 1. Backend
 
 ```bash
@@ -113,10 +131,10 @@ npm run dev
 | Frontend | http://localhost:5173 |
 | Backend API | http://localhost:5000/api |
 
-The frontend reads `VITE_API_URL` (defaults to `http://localhost:5000/api`). Set it in a root `.env` if your API runs elsewhere:
+The frontend reads `VITE_API_URL` (defaults to `http://localhost:8000/api`). Copy the root `.env.example` to `.env`, or set:
 
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:8000/api
 ```
 
 ### 3. Try the demo
@@ -169,7 +187,7 @@ Base path: `/api`
 | `GET` | `/intelligence/legal` | Legal guidance by data class |
 | `POST` | `/intelligence/refresh` | Force sync + rescan |
 
-Interactive docs (when the API is running): http://localhost:5000/docs
+Interactive docs (when the API is running): http://localhost:8000/docs
 
 ---
 

@@ -1,5 +1,5 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class AlertStatusUpdate(BaseModel):
-    status: str
+    status: str = Field(pattern="^(pending|resolved|acknowledged|dismissed)$")

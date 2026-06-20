@@ -1,0 +1,3920 @@
+[
+  {
+    "id": 1,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Malware",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-12-25",
+    "reference": "CERT-DS-0001"
+  },
+  {
+    "id": 2,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Critical",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Android",
+      "Cloud Infrastructure",
+      "Authentication Servers"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-09-19",
+    "reference": "CERT-DS-0002"
+  },
+  {
+    "id": 3,
+    "title": "Web Application Injection Risk",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-04-18",
+    "reference": "CERT-DS-0003"
+  },
+  {
+    "id": 4,
+    "title": "Ransomware Activity Observed",
+    "severity": "High",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Android",
+      "iOS"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-03-09",
+    "reference": "CERT-DS-0004"
+  },
+  {
+    "id": 5,
+    "title": "Ransomware Activity Observed",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Databases",
+      "Authentication Servers"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2026-01-18",
+    "reference": "CERT-DS-0005"
+  },
+  {
+    "id": 6,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Low",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Android",
+      "Authentication Servers",
+      "Databases"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-10-30",
+    "reference": "CERT-DS-0006"
+  },
+  {
+    "id": 7,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Low",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-08-06",
+    "reference": "CERT-DS-0007"
+  },
+  {
+    "id": 8,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-09-19",
+    "reference": "CERT-DS-0008"
+  },
+  {
+    "id": 9,
+    "title": "Database Security Advisory",
+    "severity": "Low",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Windows",
+      "Authentication Servers",
+      "Linux"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-06-18",
+    "reference": "CERT-DS-0009"
+  },
+  {
+    "id": 10,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Android",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-02-20",
+    "reference": "CERT-DS-0010"
+  },
+  {
+    "id": 11,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Web Applications"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-05-05",
+    "reference": "CERT-DS-0011"
+  },
+  {
+    "id": 12,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Linux",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-10-19",
+    "reference": "CERT-DS-0012"
+  },
+  {
+    "id": 13,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Windows",
+      "Authentication Servers"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2025-05-20",
+    "reference": "CERT-DS-0013"
+  },
+  {
+    "id": 14,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Government Portals",
+      "Email Systems"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-08-06",
+    "reference": "CERT-DS-0014"
+  },
+  {
+    "id": 15,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "iOS",
+      "Government Portals",
+      "Web Applications"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-02-21",
+    "reference": "CERT-DS-0015"
+  },
+  {
+    "id": 16,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Email Systems"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2026-10-20",
+    "reference": "CERT-DS-0016"
+  },
+  {
+    "id": 17,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-08-04",
+    "reference": "CERT-DS-0017"
+  },
+  {
+    "id": 18,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-04-18",
+    "reference": "CERT-DS-0018"
+  },
+  {
+    "id": 19,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-01-06",
+    "reference": "CERT-DS-0019"
+  },
+  {
+    "id": 20,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "iOS",
+      "Public Sector Networks",
+      "Android"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-09-12",
+    "reference": "CERT-DS-0020"
+  },
+  {
+    "id": 21,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-11-02",
+    "reference": "CERT-DS-0021"
+  },
+  {
+    "id": 22,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Medium",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-01-23",
+    "reference": "CERT-DS-0022"
+  },
+  {
+    "id": 23,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Web Applications",
+      "Linux"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-08-24",
+    "reference": "CERT-DS-0023"
+  },
+  {
+    "id": 24,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Web Applications",
+      "Authentication Servers",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-02-12",
+    "reference": "CERT-DS-0024"
+  },
+  {
+    "id": 25,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "iOS",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-03-29",
+    "reference": "CERT-DS-0025"
+  },
+  {
+    "id": 26,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Government Portals",
+      "Citizen Service Platforms",
+      "Databases"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-09-19",
+    "reference": "CERT-DS-0026"
+  },
+  {
+    "id": 27,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Low",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Email Systems",
+      "Android",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-06-02",
+    "reference": "CERT-DS-0027"
+  },
+  {
+    "id": 28,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Linux",
+      "iOS"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-02-14",
+    "reference": "CERT-DS-0028"
+  },
+  {
+    "id": 29,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Malware",
+    "affectedSystems": [
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-12-07",
+    "reference": "CERT-DS-0029"
+  },
+  {
+    "id": 30,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Low",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Databases",
+      "Web Applications",
+      "Government Portals"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2024-05-24",
+    "reference": "CERT-DS-0030"
+  },
+  {
+    "id": 31,
+    "title": "Ransomware Activity Observed",
+    "severity": "High",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Web Applications",
+      "Databases",
+      "Windows"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-05-01",
+    "reference": "CERT-DS-0031"
+  },
+  {
+    "id": 32,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-08-22",
+    "reference": "CERT-DS-0032"
+  },
+  {
+    "id": 33,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Malware",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-04-10",
+    "reference": "CERT-DS-0033"
+  },
+  {
+    "id": 34,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Low",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2025-09-04",
+    "reference": "CERT-DS-0034"
+  },
+  {
+    "id": 35,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Government Portals"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-05-08",
+    "reference": "CERT-DS-0035"
+  },
+  {
+    "id": 36,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-01-08",
+    "reference": "CERT-DS-0036"
+  },
+  {
+    "id": 37,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-02-11",
+    "reference": "CERT-DS-0037"
+  },
+  {
+    "id": 38,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Low",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Databases",
+      "Android",
+      "Authentication Servers"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2025-05-20",
+    "reference": "CERT-DS-0038"
+  },
+  {
+    "id": 39,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-01-25",
+    "reference": "CERT-DS-0039"
+  },
+  {
+    "id": 40,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Government Portals",
+      "Email Systems",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-09-09",
+    "reference": "CERT-DS-0040"
+  },
+  {
+    "id": 41,
+    "title": "Ransomware Activity Observed",
+    "severity": "Medium",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Web Applications",
+      "Linux"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-01-01",
+    "reference": "CERT-DS-0041"
+  },
+  {
+    "id": 42,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Databases",
+      "Government Portals",
+      "Android"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-01-28",
+    "reference": "CERT-DS-0042"
+  },
+  {
+    "id": 43,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Email Systems",
+      "Windows",
+      "Databases"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-06-28",
+    "reference": "CERT-DS-0043"
+  },
+  {
+    "id": 44,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Authentication Servers"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-09-01",
+    "reference": "CERT-DS-0044"
+  },
+  {
+    "id": 45,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Citizen Service Platforms",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-01-07",
+    "reference": "CERT-DS-0045"
+  },
+  {
+    "id": 46,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Linux",
+      "Government Portals",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-11-23",
+    "reference": "CERT-DS-0046"
+  },
+  {
+    "id": 47,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Critical",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Authentication Servers"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-06-20",
+    "reference": "CERT-DS-0047"
+  },
+  {
+    "id": 48,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Windows",
+      "Citizen Service Platforms",
+      "iOS"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-01-17",
+    "reference": "CERT-DS-0048"
+  },
+  {
+    "id": 49,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Databases",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2025-06-18",
+    "reference": "CERT-DS-0049"
+  },
+  {
+    "id": 50,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Linux"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-04-07",
+    "reference": "CERT-DS-0050"
+  },
+  {
+    "id": 51,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "iOS",
+      "Linux",
+      "Web Applications"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-05-01",
+    "reference": "CERT-DS-0051"
+  },
+  {
+    "id": 52,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Public Sector Networks",
+      "Windows"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-09-18",
+    "reference": "CERT-DS-0052"
+  },
+  {
+    "id": 53,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Government Portals",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-12-26",
+    "reference": "CERT-DS-0053"
+  },
+  {
+    "id": 54,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "High",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-05-31",
+    "reference": "CERT-DS-0054"
+  },
+  {
+    "id": 55,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Web Applications"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-08-19",
+    "reference": "CERT-DS-0055"
+  },
+  {
+    "id": 56,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Web Applications"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-04-14",
+    "reference": "CERT-DS-0056"
+  },
+  {
+    "id": 57,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Email Systems",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-02-02",
+    "reference": "CERT-DS-0057"
+  },
+  {
+    "id": 58,
+    "title": "Database Security Advisory",
+    "severity": "Low",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Government Portals",
+      "iOS"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2025-10-08",
+    "reference": "CERT-DS-0058"
+  },
+  {
+    "id": 59,
+    "title": "Database Security Advisory",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Authentication Servers"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-07-09",
+    "reference": "CERT-DS-0059"
+  },
+  {
+    "id": 60,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-06-14",
+    "reference": "CERT-DS-0060"
+  },
+  {
+    "id": 61,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-09-09",
+    "reference": "CERT-DS-0061"
+  },
+  {
+    "id": 62,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Databases",
+      "Authentication Servers",
+      "Linux"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-03-24",
+    "reference": "CERT-DS-0062"
+  },
+  {
+    "id": 63,
+    "title": "Web Application Injection Risk",
+    "severity": "Critical",
+    "category": "Malware",
+    "affectedSystems": [
+      "iOS",
+      "Citizen Service Platforms",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-01-24",
+    "reference": "CERT-DS-0063"
+  },
+  {
+    "id": 64,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-10-16",
+    "reference": "CERT-DS-0064"
+  },
+  {
+    "id": 65,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Medium",
+    "category": "Malware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Government Portals",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-10-29",
+    "reference": "CERT-DS-0065"
+  },
+  {
+    "id": 66,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Linux",
+      "Authentication Servers"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-02-19",
+    "reference": "CERT-DS-0066"
+  },
+  {
+    "id": 67,
+    "title": "API Authentication Vulnerability",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-07-11",
+    "reference": "CERT-DS-0067"
+  },
+  {
+    "id": 68,
+    "title": "Ransomware Activity Observed",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Databases",
+      "Android",
+      "Email Systems"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-01-11",
+    "reference": "CERT-DS-0068"
+  },
+  {
+    "id": 69,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Low",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Email Systems",
+      "Government Portals",
+      "iOS"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2025-08-05",
+    "reference": "CERT-DS-0069"
+  },
+  {
+    "id": 70,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Medium",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Windows",
+      "iOS"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-07-26",
+    "reference": "CERT-DS-0070"
+  },
+  {
+    "id": 71,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Low",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Android",
+      "Linux",
+      "Databases"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-10-01",
+    "reference": "CERT-DS-0071"
+  },
+  {
+    "id": 72,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Web Applications",
+      "Android"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-04-11",
+    "reference": "CERT-DS-0072"
+  },
+  {
+    "id": 73,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-08-10",
+    "reference": "CERT-DS-0073"
+  },
+  {
+    "id": 74,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Low",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Email Systems",
+      "Government Portals"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-08-14",
+    "reference": "CERT-DS-0074"
+  },
+  {
+    "id": 75,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Windows",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-04-23",
+    "reference": "CERT-DS-0075"
+  },
+  {
+    "id": 76,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Government Portals"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-05-09",
+    "reference": "CERT-DS-0076"
+  },
+  {
+    "id": 77,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Windows",
+      "Public Sector Networks",
+      "Android"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-05-17",
+    "reference": "CERT-DS-0077"
+  },
+  {
+    "id": 78,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Malware",
+    "affectedSystems": [
+      "Windows"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2025-11-27",
+    "reference": "CERT-DS-0078"
+  },
+  {
+    "id": 79,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2024-01-05",
+    "reference": "CERT-DS-0079"
+  },
+  {
+    "id": 80,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Phishing",
+    "affectedSystems": [
+      "iOS",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-12-28",
+    "reference": "CERT-DS-0080"
+  },
+  {
+    "id": 81,
+    "title": "Database Security Advisory",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-01-21",
+    "reference": "CERT-DS-0081"
+  },
+  {
+    "id": 82,
+    "title": "Database Security Advisory",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Linux",
+      "Government Portals",
+      "Authentication Servers"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-06-27",
+    "reference": "CERT-DS-0082"
+  },
+  {
+    "id": 83,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Linux",
+      "Windows"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-02-28",
+    "reference": "CERT-DS-0083"
+  },
+  {
+    "id": 84,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-05-30",
+    "reference": "CERT-DS-0084"
+  },
+  {
+    "id": 85,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Government Portals",
+      "iOS",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-01-04",
+    "reference": "CERT-DS-0085"
+  },
+  {
+    "id": 86,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Linux",
+      "Web Applications"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-02-10",
+    "reference": "CERT-DS-0086"
+  },
+  {
+    "id": 87,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "High",
+    "category": "Malware",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-02-27",
+    "reference": "CERT-DS-0087"
+  },
+  {
+    "id": 88,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-10-16",
+    "reference": "CERT-DS-0088"
+  },
+  {
+    "id": 89,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Critical",
+    "category": "Malware",
+    "affectedSystems": [
+      "Government Portals",
+      "Email Systems",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-03-05",
+    "reference": "CERT-DS-0089"
+  },
+  {
+    "id": 90,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Databases",
+      "Authentication Servers"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-12-19",
+    "reference": "CERT-DS-0090"
+  },
+  {
+    "id": 91,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "iOS",
+      "Cloud Infrastructure",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-08-11",
+    "reference": "CERT-DS-0091"
+  },
+  {
+    "id": 92,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Malware",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-08-22",
+    "reference": "CERT-DS-0092"
+  },
+  {
+    "id": 93,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Web Applications",
+      "Databases"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-06-14",
+    "reference": "CERT-DS-0093"
+  },
+  {
+    "id": 94,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-06-14",
+    "reference": "CERT-DS-0094"
+  },
+  {
+    "id": 95,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-07-17",
+    "reference": "CERT-DS-0095"
+  },
+  {
+    "id": 96,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Authentication Servers"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-10-14",
+    "reference": "CERT-DS-0096"
+  },
+  {
+    "id": 97,
+    "title": "Database Security Advisory",
+    "severity": "High",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-01-02",
+    "reference": "CERT-DS-0097"
+  },
+  {
+    "id": 98,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "iOS",
+      "Web Applications"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2024-05-07",
+    "reference": "CERT-DS-0098"
+  },
+  {
+    "id": 99,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "iOS",
+      "Android",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-06-08",
+    "reference": "CERT-DS-0099"
+  },
+  {
+    "id": 100,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Government Portals",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-10-05",
+    "reference": "CERT-DS-0100"
+  },
+  {
+    "id": 101,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Windows",
+      "Authentication Servers"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-02-16",
+    "reference": "CERT-DS-0101"
+  },
+  {
+    "id": 102,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Databases",
+      "Android"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-05-11",
+    "reference": "CERT-DS-0102"
+  },
+  {
+    "id": 103,
+    "title": "Web Application Injection Risk",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Linux"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-05-29",
+    "reference": "CERT-DS-0103"
+  },
+  {
+    "id": 104,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Government Portals",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-06-10",
+    "reference": "CERT-DS-0104"
+  },
+  {
+    "id": 105,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Malware",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-10-18",
+    "reference": "CERT-DS-0105"
+  },
+  {
+    "id": 106,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Government Portals",
+      "iOS"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-12-11",
+    "reference": "CERT-DS-0106"
+  },
+  {
+    "id": 107,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Email Systems"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-11-25",
+    "reference": "CERT-DS-0107"
+  },
+  {
+    "id": 108,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Government Portals",
+      "Public Sector Networks",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-05-03",
+    "reference": "CERT-DS-0108"
+  },
+  {
+    "id": 109,
+    "title": "Ransomware Activity Observed",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Linux"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-05-25",
+    "reference": "CERT-DS-0109"
+  },
+  {
+    "id": 110,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Government Portals",
+      "Windows",
+      "Linux"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2026-11-18",
+    "reference": "CERT-DS-0110"
+  },
+  {
+    "id": 111,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Linux",
+      "Public Sector Networks",
+      "Authentication Servers"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-11-17",
+    "reference": "CERT-DS-0111"
+  },
+  {
+    "id": 112,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "iOS"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2025-05-15",
+    "reference": "CERT-DS-0112"
+  },
+  {
+    "id": 113,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Web Applications"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-12-19",
+    "reference": "CERT-DS-0113"
+  },
+  {
+    "id": 114,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Windows",
+      "Public Sector Networks",
+      "Linux"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-01-18",
+    "reference": "CERT-DS-0114"
+  },
+  {
+    "id": 115,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-04-23",
+    "reference": "CERT-DS-0115"
+  },
+  {
+    "id": 116,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Email Systems",
+      "Linux"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-02-24",
+    "reference": "CERT-DS-0116"
+  },
+  {
+    "id": 117,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-02-28",
+    "reference": "CERT-DS-0117"
+  },
+  {
+    "id": 118,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-04-08",
+    "reference": "CERT-DS-0118"
+  },
+  {
+    "id": 119,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Web Applications",
+      "Authentication Servers",
+      "Email Systems"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-06-20",
+    "reference": "CERT-DS-0119"
+  },
+  {
+    "id": 120,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Linux"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-05-23",
+    "reference": "CERT-DS-0120"
+  },
+  {
+    "id": 121,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Android",
+      "Government Portals"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-10-08",
+    "reference": "CERT-DS-0121"
+  },
+  {
+    "id": 122,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Windows",
+      "iOS"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2026-07-13",
+    "reference": "CERT-DS-0122"
+  },
+  {
+    "id": 123,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Windows",
+      "Government Portals"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-05-31",
+    "reference": "CERT-DS-0123"
+  },
+  {
+    "id": 124,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Windows",
+      "Email Systems"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-03-22",
+    "reference": "CERT-DS-0124"
+  },
+  {
+    "id": 125,
+    "title": "Ransomware Activity Observed",
+    "severity": "Medium",
+    "category": "Malware",
+    "affectedSystems": [
+      "Government Portals",
+      "Authentication Servers"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2026-11-17",
+    "reference": "CERT-DS-0125"
+  },
+  {
+    "id": 126,
+    "title": "API Authentication Vulnerability",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-08-24",
+    "reference": "CERT-DS-0126"
+  },
+  {
+    "id": 127,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Windows"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-08-14",
+    "reference": "CERT-DS-0127"
+  },
+  {
+    "id": 128,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Email Systems",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-11-18",
+    "reference": "CERT-DS-0128"
+  },
+  {
+    "id": 129,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Web Applications",
+      "Android"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-02-01",
+    "reference": "CERT-DS-0129"
+  },
+  {
+    "id": 130,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-09-14",
+    "reference": "CERT-DS-0130"
+  },
+  {
+    "id": 131,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Linux",
+      "Android"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-05-22",
+    "reference": "CERT-DS-0131"
+  },
+  {
+    "id": 132,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Authentication Servers",
+      "Government Portals"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-02-11",
+    "reference": "CERT-DS-0132"
+  },
+  {
+    "id": 133,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Email Systems",
+      "Linux",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-05-27",
+    "reference": "CERT-DS-0133"
+  },
+  {
+    "id": 134,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Medium",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Linux",
+      "Windows",
+      "Android"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-07-28",
+    "reference": "CERT-DS-0134"
+  },
+  {
+    "id": 135,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Windows"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-02-01",
+    "reference": "CERT-DS-0135"
+  },
+  {
+    "id": 136,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "iOS",
+      "Citizen Service Platforms",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2025-01-21",
+    "reference": "CERT-DS-0136"
+  },
+  {
+    "id": 137,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Web Applications",
+      "Email Systems"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-06-25",
+    "reference": "CERT-DS-0137"
+  },
+  {
+    "id": 138,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Government Portals",
+      "Email Systems"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-09-28",
+    "reference": "CERT-DS-0138"
+  },
+  {
+    "id": 139,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Low",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Email Systems",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-03-11",
+    "reference": "CERT-DS-0139"
+  },
+  {
+    "id": 140,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-09-02",
+    "reference": "CERT-DS-0140"
+  },
+  {
+    "id": 141,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Android",
+      "Databases"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-12-18",
+    "reference": "CERT-DS-0141"
+  },
+  {
+    "id": 142,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Linux",
+      "Government Portals"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-06-24",
+    "reference": "CERT-DS-0142"
+  },
+  {
+    "id": 143,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-02-02",
+    "reference": "CERT-DS-0143"
+  },
+  {
+    "id": 144,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Critical",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Email Systems",
+      "Linux"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-01-30",
+    "reference": "CERT-DS-0144"
+  },
+  {
+    "id": 145,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Citizen Service Platforms",
+      "Government Portals"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-09-07",
+    "reference": "CERT-DS-0145"
+  },
+  {
+    "id": 146,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Phishing",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-10-12",
+    "reference": "CERT-DS-0146"
+  },
+  {
+    "id": 147,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "iOS",
+      "Android",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-06-14",
+    "reference": "CERT-DS-0147"
+  },
+  {
+    "id": 148,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-11-20",
+    "reference": "CERT-DS-0148"
+  },
+  {
+    "id": 149,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Web Applications"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2024-05-21",
+    "reference": "CERT-DS-0149"
+  },
+  {
+    "id": 150,
+    "title": "API Authentication Vulnerability",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "iOS",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-07-05",
+    "reference": "CERT-DS-0150"
+  },
+  {
+    "id": 151,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "iOS",
+      "Web Applications"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-01-01",
+    "reference": "CERT-DS-0151"
+  },
+  {
+    "id": 152,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Government Portals",
+      "iOS",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-12-11",
+    "reference": "CERT-DS-0152"
+  },
+  {
+    "id": 153,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Databases",
+      "Citizen Service Platforms",
+      "Email Systems"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-03-28",
+    "reference": "CERT-DS-0153"
+  },
+  {
+    "id": 154,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "iOS",
+      "Public Sector Networks",
+      "Web Applications"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-07-17",
+    "reference": "CERT-DS-0154"
+  },
+  {
+    "id": 155,
+    "title": "Database Security Advisory",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-06-10",
+    "reference": "CERT-DS-0155"
+  },
+  {
+    "id": 156,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-09-24",
+    "reference": "CERT-DS-0156"
+  },
+  {
+    "id": 157,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Windows",
+      "Email Systems"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-07-27",
+    "reference": "CERT-DS-0157"
+  },
+  {
+    "id": 158,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Web Applications",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-10-22",
+    "reference": "CERT-DS-0158"
+  },
+  {
+    "id": 159,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Government Portals",
+      "Android"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-01-26",
+    "reference": "CERT-DS-0159"
+  },
+  {
+    "id": 160,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "iOS",
+      "Web Applications",
+      "Government Portals"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-06-12",
+    "reference": "CERT-DS-0160"
+  },
+  {
+    "id": 161,
+    "title": "Database Security Advisory",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Email Systems",
+      "Government Portals",
+      "Databases"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-06-15",
+    "reference": "CERT-DS-0161"
+  },
+  {
+    "id": 162,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Email Systems",
+      "iOS"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-10-23",
+    "reference": "CERT-DS-0162"
+  },
+  {
+    "id": 163,
+    "title": "Ransomware Activity Observed",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Databases",
+      "Android"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-09-24",
+    "reference": "CERT-DS-0163"
+  },
+  {
+    "id": 164,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Email Systems"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-09-07",
+    "reference": "CERT-DS-0164"
+  },
+  {
+    "id": 165,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Email Systems",
+      "iOS"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-01-08",
+    "reference": "CERT-DS-0165"
+  },
+  {
+    "id": 166,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Web Applications",
+      "iOS",
+      "Government Portals"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-08-20",
+    "reference": "CERT-DS-0166"
+  },
+  {
+    "id": 167,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Critical",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Authentication Servers"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-10-03",
+    "reference": "CERT-DS-0167"
+  },
+  {
+    "id": 168,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "iOS",
+      "Authentication Servers",
+      "Databases"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-09-20",
+    "reference": "CERT-DS-0168"
+  },
+  {
+    "id": 169,
+    "title": "Database Security Advisory",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Government Portals",
+      "Authentication Servers"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-09-13",
+    "reference": "CERT-DS-0169"
+  },
+  {
+    "id": 170,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Public Sector Networks",
+      "Web Applications"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-07-30",
+    "reference": "CERT-DS-0170"
+  },
+  {
+    "id": 171,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Critical",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Databases"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-12-29",
+    "reference": "CERT-DS-0171"
+  },
+  {
+    "id": 172,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-12-06",
+    "reference": "CERT-DS-0172"
+  },
+  {
+    "id": 173,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Windows",
+      "Email Systems"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-07-03",
+    "reference": "CERT-DS-0173"
+  },
+  {
+    "id": 174,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Web Applications"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-01-11",
+    "reference": "CERT-DS-0174"
+  },
+  {
+    "id": 175,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-01-14",
+    "reference": "CERT-DS-0175"
+  },
+  {
+    "id": 176,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-11-24",
+    "reference": "CERT-DS-0176"
+  },
+  {
+    "id": 177,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Public Sector Networks",
+      "Linux"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-02-13",
+    "reference": "CERT-DS-0177"
+  },
+  {
+    "id": 178,
+    "title": "Database Security Advisory",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Windows"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-04-17",
+    "reference": "CERT-DS-0178"
+  },
+  {
+    "id": 179,
+    "title": "Ransomware Activity Observed",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2026-02-23",
+    "reference": "CERT-DS-0179"
+  },
+  {
+    "id": 180,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-03-02",
+    "reference": "CERT-DS-0180"
+  },
+  {
+    "id": 181,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Web Applications",
+      "Cloud Infrastructure",
+      "Government Portals"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-11-17",
+    "reference": "CERT-DS-0181"
+  },
+  {
+    "id": 182,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Public Sector Networks",
+      "iOS"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-04-17",
+    "reference": "CERT-DS-0182"
+  },
+  {
+    "id": 183,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Email Systems",
+      "Windows"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-06-01",
+    "reference": "CERT-DS-0183"
+  },
+  {
+    "id": 184,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Databases",
+      "Web Applications"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-08-05",
+    "reference": "CERT-DS-0184"
+  },
+  {
+    "id": 185,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Android",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-01-23",
+    "reference": "CERT-DS-0185"
+  },
+  {
+    "id": 186,
+    "title": "API Authentication Vulnerability",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-06-08",
+    "reference": "CERT-DS-0186"
+  },
+  {
+    "id": 187,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Authentication Servers",
+      "Web Applications"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-08-16",
+    "reference": "CERT-DS-0187"
+  },
+  {
+    "id": 188,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Cloud Infrastructure",
+      "Web Applications"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-08-07",
+    "reference": "CERT-DS-0188"
+  },
+  {
+    "id": 189,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Critical",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-10-02",
+    "reference": "CERT-DS-0189"
+  },
+  {
+    "id": 190,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Linux"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-11-12",
+    "reference": "CERT-DS-0190"
+  },
+  {
+    "id": 191,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-04-28",
+    "reference": "CERT-DS-0191"
+  },
+  {
+    "id": 192,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Databases",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-10-08",
+    "reference": "CERT-DS-0192"
+  },
+  {
+    "id": 193,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Email Systems",
+      "iOS",
+      "Windows"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-09-17",
+    "reference": "CERT-DS-0193"
+  },
+  {
+    "id": 194,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-05-06",
+    "reference": "CERT-DS-0194"
+  },
+  {
+    "id": 195,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Linux",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2025-06-21",
+    "reference": "CERT-DS-0195"
+  },
+  {
+    "id": 196,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Windows"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-07-01",
+    "reference": "CERT-DS-0196"
+  },
+  {
+    "id": 197,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Email Systems",
+      "Windows",
+      "Government Portals"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-11-11",
+    "reference": "CERT-DS-0197"
+  },
+  {
+    "id": 198,
+    "title": "API Authentication Vulnerability",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Authentication Servers"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-02-18",
+    "reference": "CERT-DS-0198"
+  },
+  {
+    "id": 199,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Windows"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-07-18",
+    "reference": "CERT-DS-0199"
+  },
+  {
+    "id": 200,
+    "title": "Database Security Advisory",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-08-23",
+    "reference": "CERT-DS-0200"
+  },
+  {
+    "id": 201,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Email Systems",
+      "Android",
+      "Authentication Servers"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-12-20",
+    "reference": "CERT-DS-0201"
+  },
+  {
+    "id": 202,
+    "title": "Ransomware Activity Observed",
+    "severity": "Low",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-11-04",
+    "reference": "CERT-DS-0202"
+  },
+  {
+    "id": 203,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2026-06-12",
+    "reference": "CERT-DS-0203"
+  },
+  {
+    "id": 204,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Critical",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Databases",
+      "Android",
+      "Web Applications"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-12-30",
+    "reference": "CERT-DS-0204"
+  },
+  {
+    "id": 205,
+    "title": "Database Security Advisory",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Windows",
+      "Authentication Servers",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-04-22",
+    "reference": "CERT-DS-0205"
+  },
+  {
+    "id": 206,
+    "title": "Database Security Advisory",
+    "severity": "Low",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Web Applications",
+      "Citizen Service Platforms",
+      "Windows"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-08-25",
+    "reference": "CERT-DS-0206"
+  },
+  {
+    "id": 207,
+    "title": "Ransomware Activity Observed",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Authentication Servers",
+      "Android"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-09-24",
+    "reference": "CERT-DS-0207"
+  },
+  {
+    "id": 208,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "iOS"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-10-02",
+    "reference": "CERT-DS-0208"
+  },
+  {
+    "id": 209,
+    "title": "Database Security Advisory",
+    "severity": "High",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Citizen Service Platforms",
+      "Web Applications"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-08-07",
+    "reference": "CERT-DS-0209"
+  },
+  {
+    "id": 210,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-02-01",
+    "reference": "CERT-DS-0210"
+  },
+  {
+    "id": 211,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Web Applications"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-01-17",
+    "reference": "CERT-DS-0211"
+  },
+  {
+    "id": 212,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Windows",
+      "Government Portals"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-06-12",
+    "reference": "CERT-DS-0212"
+  },
+  {
+    "id": 213,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Email Systems",
+      "Citizen Service Platforms",
+      "Databases"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-06-29",
+    "reference": "CERT-DS-0213"
+  },
+  {
+    "id": 214,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Linux",
+      "Authentication Servers"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-01-17",
+    "reference": "CERT-DS-0214"
+  },
+  {
+    "id": 215,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Malware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Cloud Infrastructure",
+      "iOS"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-08-14",
+    "reference": "CERT-DS-0215"
+  },
+  {
+    "id": 216,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "iOS",
+      "Windows",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-04-27",
+    "reference": "CERT-DS-0216"
+  },
+  {
+    "id": 217,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Email Systems",
+      "Databases"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-05-30",
+    "reference": "CERT-DS-0217"
+  },
+  {
+    "id": 218,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "iOS",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-09-01",
+    "reference": "CERT-DS-0218"
+  },
+  {
+    "id": 219,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2024-11-18",
+    "reference": "CERT-DS-0219"
+  },
+  {
+    "id": 220,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Databases"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2025-05-12",
+    "reference": "CERT-DS-0220"
+  },
+  {
+    "id": 221,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Windows",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-05-07",
+    "reference": "CERT-DS-0221"
+  },
+  {
+    "id": 222,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Linux",
+      "iOS"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-07-21",
+    "reference": "CERT-DS-0222"
+  },
+  {
+    "id": 223,
+    "title": "Ransomware Activity Observed",
+    "severity": "High",
+    "category": "Malware",
+    "affectedSystems": [
+      "Linux",
+      "iOS",
+      "Android"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-09-04",
+    "reference": "CERT-DS-0223"
+  },
+  {
+    "id": 224,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Critical",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Citizen Service Platforms",
+      "Windows"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2024-09-19",
+    "reference": "CERT-DS-0224"
+  },
+  {
+    "id": 225,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-12-27",
+    "reference": "CERT-DS-0225"
+  },
+  {
+    "id": 226,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Windows"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-07-29",
+    "reference": "CERT-DS-0226"
+  },
+  {
+    "id": 227,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Authentication Servers"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-06-30",
+    "reference": "CERT-DS-0227"
+  },
+  {
+    "id": 228,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-04-01",
+    "reference": "CERT-DS-0228"
+  },
+  {
+    "id": 229,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Malware",
+    "affectedSystems": [
+      "Linux",
+      "iOS"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-10-05",
+    "reference": "CERT-DS-0229"
+  },
+  {
+    "id": 230,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Linux"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-04-17",
+    "reference": "CERT-DS-0230"
+  },
+  {
+    "id": 231,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-09-19",
+    "reference": "CERT-DS-0231"
+  },
+  {
+    "id": 232,
+    "title": "Ransomware Activity Observed",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-12-10",
+    "reference": "CERT-DS-0232"
+  },
+  {
+    "id": 233,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Web Applications",
+      "Windows"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-01-29",
+    "reference": "CERT-DS-0233"
+  },
+  {
+    "id": 234,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Android",
+      "Linux"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-07-04",
+    "reference": "CERT-DS-0234"
+  },
+  {
+    "id": 235,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Windows",
+      "Linux"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2026-06-21",
+    "reference": "CERT-DS-0235"
+  },
+  {
+    "id": 236,
+    "title": "API Authentication Vulnerability",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Android"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2024-11-15",
+    "reference": "CERT-DS-0236"
+  },
+  {
+    "id": 237,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Citizen Service Platforms",
+      "Authentication Servers"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-01-22",
+    "reference": "CERT-DS-0237"
+  },
+  {
+    "id": 238,
+    "title": "Ransomware Activity Observed",
+    "severity": "Low",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-05-07",
+    "reference": "CERT-DS-0238"
+  },
+  {
+    "id": 239,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Email Systems",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-01-23",
+    "reference": "CERT-DS-0239"
+  },
+  {
+    "id": 240,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Email Systems",
+      "iOS",
+      "Web Applications"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-04-26",
+    "reference": "CERT-DS-0240"
+  },
+  {
+    "id": 241,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Linux",
+      "Android",
+      "Email Systems"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-09-05",
+    "reference": "CERT-DS-0241"
+  },
+  {
+    "id": 242,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-02-04",
+    "reference": "CERT-DS-0242"
+  },
+  {
+    "id": 243,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Databases"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-05-13",
+    "reference": "CERT-DS-0243"
+  },
+  {
+    "id": 244,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Web Applications",
+      "Databases",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-05-25",
+    "reference": "CERT-DS-0244"
+  },
+  {
+    "id": 245,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Low",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Email Systems",
+      "iOS"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-05-21",
+    "reference": "CERT-DS-0245"
+  },
+  {
+    "id": 246,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Malware",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Databases",
+      "Linux"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2024-10-05",
+    "reference": "CERT-DS-0246"
+  },
+  {
+    "id": 247,
+    "title": "API Authentication Vulnerability",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2025-03-31",
+    "reference": "CERT-DS-0247"
+  },
+  {
+    "id": 248,
+    "title": "Database Security Advisory",
+    "severity": "High",
+    "category": "Phishing",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2024-06-14",
+    "reference": "CERT-DS-0248"
+  },
+  {
+    "id": 249,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Phishing",
+    "affectedSystems": [
+      "Government Portals"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-09-29",
+    "reference": "CERT-DS-0249"
+  },
+  {
+    "id": 250,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Malware",
+    "affectedSystems": [
+      "Android",
+      "Web Applications"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2024-06-30",
+    "reference": "CERT-DS-0250"
+  },
+  {
+    "id": 251,
+    "title": "Database Security Advisory",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Android"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-02-28",
+    "reference": "CERT-DS-0251"
+  },
+  {
+    "id": 252,
+    "title": "Ransomware Activity Observed",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Android",
+      "Linux",
+      "Web Applications"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2026-07-24",
+    "reference": "CERT-DS-0252"
+  },
+  {
+    "id": 253,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Email Systems",
+      "Authentication Servers",
+      "Linux"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2025-02-26",
+    "reference": "CERT-DS-0253"
+  },
+  {
+    "id": 254,
+    "title": "API Authentication Vulnerability",
+    "severity": "Critical",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Windows",
+      "Email Systems"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-04-08",
+    "reference": "CERT-DS-0254"
+  },
+  {
+    "id": 255,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Android",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-05-02",
+    "reference": "CERT-DS-0255"
+  },
+  {
+    "id": 256,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Windows",
+      "Linux",
+      "Android"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2025-07-26",
+    "reference": "CERT-DS-0256"
+  },
+  {
+    "id": 257,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "High",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Web Applications"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-10-04",
+    "reference": "CERT-DS-0257"
+  },
+  {
+    "id": 258,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Authentication Servers",
+      "Public Sector Networks"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-05-25",
+    "reference": "CERT-DS-0258"
+  },
+  {
+    "id": 259,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-03-10",
+    "reference": "CERT-DS-0259"
+  },
+  {
+    "id": 260,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "iOS",
+      "Authentication Servers"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-05-02",
+    "reference": "CERT-DS-0260"
+  },
+  {
+    "id": 261,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Web Applications",
+      "Cloud Infrastructure",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-03-16",
+    "reference": "CERT-DS-0261"
+  },
+  {
+    "id": 262,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Email Systems"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2024-01-10",
+    "reference": "CERT-DS-0262"
+  },
+  {
+    "id": 263,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Low",
+    "category": "Malware",
+    "affectedSystems": [
+      "Android",
+      "Databases",
+      "Government Portals"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-11-02",
+    "reference": "CERT-DS-0263"
+  },
+  {
+    "id": 264,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Databases"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-10-11",
+    "reference": "CERT-DS-0264"
+  },
+  {
+    "id": 265,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Critical",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Windows"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-10-17",
+    "reference": "CERT-DS-0265"
+  },
+  {
+    "id": 266,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Low",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Android",
+      "Email Systems"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-01-06",
+    "reference": "CERT-DS-0266"
+  },
+  {
+    "id": 267,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "iOS"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-04-06",
+    "reference": "CERT-DS-0267"
+  },
+  {
+    "id": 268,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Email Systems"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-07-03",
+    "reference": "CERT-DS-0268"
+  },
+  {
+    "id": 269,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Malware",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Web Applications",
+      "Android"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2026-03-18",
+    "reference": "CERT-DS-0269"
+  },
+  {
+    "id": 270,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2026-03-22",
+    "reference": "CERT-DS-0270"
+  },
+  {
+    "id": 271,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-10-17",
+    "reference": "CERT-DS-0271"
+  },
+  {
+    "id": 272,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-03-04",
+    "reference": "CERT-DS-0272"
+  },
+  {
+    "id": 273,
+    "title": "Database Security Advisory",
+    "severity": "Medium",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "iOS",
+      "Government Portals"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2025-03-02",
+    "reference": "CERT-DS-0273"
+  },
+  {
+    "id": 274,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Windows"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2026-05-31",
+    "reference": "CERT-DS-0274"
+  },
+  {
+    "id": 275,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Windows",
+      "Cloud Infrastructure",
+      "Email Systems"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-06-25",
+    "reference": "CERT-DS-0275"
+  },
+  {
+    "id": 276,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Low",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Windows",
+      "Databases"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2025-06-13",
+    "reference": "CERT-DS-0276"
+  },
+  {
+    "id": 277,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Windows"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-01-17",
+    "reference": "CERT-DS-0277"
+  },
+  {
+    "id": 278,
+    "title": "Citizen Data Exposure Risk",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Citizen Service Platforms",
+      "Databases",
+      "Android"
+    ],
+    "recommendation": "Audit data access logs and encrypt sensitive information.",
+    "date": "2025-11-16",
+    "reference": "CERT-DS-0278"
+  },
+  {
+    "id": 279,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "Windows",
+      "Web Applications",
+      "Android"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2024-05-18",
+    "reference": "CERT-DS-0279"
+  },
+  {
+    "id": 280,
+    "title": "Ransomware Activity Observed",
+    "severity": "Critical",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Databases",
+      "Government Portals"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2026-06-12",
+    "reference": "CERT-DS-0280"
+  },
+  {
+    "id": 281,
+    "title": "Ransomware Activity Observed",
+    "severity": "Low",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "iOS",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2024-07-01",
+    "reference": "CERT-DS-0281"
+  },
+  {
+    "id": 282,
+    "title": "Phishing Campaign Targeting Government Employees",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Android",
+      "iOS"
+    ],
+    "recommendation": "Verify sender identity and avoid opening suspicious links.",
+    "date": "2025-03-17",
+    "reference": "CERT-DS-0282"
+  },
+  {
+    "id": 283,
+    "title": "API Authentication Vulnerability",
+    "severity": "Low",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Windows",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Rotate API keys and enforce strong authentication mechanisms.",
+    "date": "2026-10-26",
+    "reference": "CERT-DS-0283"
+  },
+  {
+    "id": 284,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Cloud Infrastructure",
+      "Android",
+      "Government Portals"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-04-10",
+    "reference": "CERT-DS-0284"
+  },
+  {
+    "id": 285,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-06-18",
+    "reference": "CERT-DS-0285"
+  },
+  {
+    "id": 286,
+    "title": "Database Security Advisory",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Authentication Servers"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2026-08-27",
+    "reference": "CERT-DS-0286"
+  },
+  {
+    "id": 287,
+    "title": "Web Application Injection Risk",
+    "severity": "Low",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Email Systems",
+      "Government Portals"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-03-17",
+    "reference": "CERT-DS-0287"
+  },
+  {
+    "id": 288,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Windows",
+      "Linux"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2024-01-08",
+    "reference": "CERT-DS-0288"
+  },
+  {
+    "id": 289,
+    "title": "Database Security Advisory",
+    "severity": "Medium",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Public Sector Networks"
+    ],
+    "recommendation": "Apply latest security patches and review access permissions.",
+    "date": "2025-10-02",
+    "reference": "CERT-DS-0289"
+  },
+  {
+    "id": 290,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Data Protection",
+    "affectedSystems": [
+      "iOS",
+      "Public Sector Networks",
+      "Android"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2026-10-17",
+    "reference": "CERT-DS-0290"
+  },
+  {
+    "id": 291,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "Critical",
+    "category": "Ransomware",
+    "affectedSystems": [
+      "Android",
+      "Web Applications"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2025-04-11",
+    "reference": "CERT-DS-0291"
+  },
+  {
+    "id": 292,
+    "title": "Unauthorized Access Attempts Detected",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Government Portals",
+      "Citizen Service Platforms"
+    ],
+    "recommendation": "Investigate login activity and enable MFA.",
+    "date": "2024-11-20",
+    "reference": "CERT-DS-0292"
+  },
+  {
+    "id": 293,
+    "title": "Remote Code Execution Vulnerability",
+    "severity": "High",
+    "category": "Web Application Security",
+    "affectedSystems": [
+      "Authentication Servers",
+      "Government Portals"
+    ],
+    "recommendation": "Update affected software immediately.",
+    "date": "2026-10-09",
+    "reference": "CERT-DS-0293"
+  },
+  {
+    "id": 294,
+    "title": "Web Application Injection Risk",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Android",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-09-15",
+    "reference": "CERT-DS-0294"
+  },
+  {
+    "id": 295,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Cloud Security",
+    "affectedSystems": [
+      "Government Portals",
+      "Databases"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2026-03-22",
+    "reference": "CERT-DS-0295"
+  },
+  {
+    "id": 296,
+    "title": "Critical Credential Exposure Detected",
+    "severity": "High",
+    "category": "Government Systems",
+    "affectedSystems": [
+      "Databases",
+      "Authentication Servers",
+      "Android"
+    ],
+    "recommendation": "Immediately reset affected passwords and enable MFA.",
+    "date": "2026-12-31",
+    "reference": "CERT-DS-0296"
+  },
+  {
+    "id": 297,
+    "title": "Web Application Injection Risk",
+    "severity": "Medium",
+    "category": "Malware",
+    "affectedSystems": [
+      "Public Sector Networks",
+      "Windows",
+      "Government Portals"
+    ],
+    "recommendation": "Validate inputs and implement secure coding practices.",
+    "date": "2024-11-30",
+    "reference": "CERT-DS-0297"
+  },
+  {
+    "id": 298,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "Critical",
+    "category": "Network Security",
+    "affectedSystems": [
+      "Linux",
+      "Public Sector Networks",
+      "Cloud Infrastructure"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2026-08-02",
+    "reference": "CERT-DS-0298"
+  },
+  {
+    "id": 299,
+    "title": "Ransomware Activity Observed",
+    "severity": "Medium",
+    "category": "Mobile Security",
+    "affectedSystems": [
+      "Web Applications"
+    ],
+    "recommendation": "Isolate affected systems and restore from verified backups.",
+    "date": "2025-11-13",
+    "reference": "CERT-DS-0299"
+  },
+  {
+    "id": 300,
+    "title": "Cloud Storage Misconfiguration Risk",
+    "severity": "High",
+    "category": "Credential Security",
+    "affectedSystems": [
+      "Databases",
+      "Public Sector Networks",
+      "Android"
+    ],
+    "recommendation": "Review storage permissions and enforce least privilege access.",
+    "date": "2026-12-23",
+    "reference": "CERT-DS-0300"
+  }
+]

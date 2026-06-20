@@ -13,6 +13,9 @@ import {
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
 import IntelResyncButton from '../components/IntelResyncButton';
+import CertAdvisoriesPanel from '../components/CertAdvisoriesPanel';
+import { useI18n } from '../i18n';
+import { cn } from '../utils/cn';
 
 interface Breach {
   Name: string;
@@ -33,7 +36,9 @@ interface LegalItem {
 }
 
 const LegalIntelligence: React.FC = () => {
+  const { t } = useI18n();
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState<'hibp' | 'cert'>('hibp');
   const [records, setRecords] = useState<Breach[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
@@ -101,30 +106,50 @@ const LegalIntelligence: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-text">Threat Intelligence Hub</h1>
-          <p className="text-text-muted mt-1 text-sm font-mono">HIBP verified corpus · domain exposure matching</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-text">{t.threatIntel.title}</h1>
+          <p className="text-text-muted mt-1 text-sm font-mono">{t.threatIntel.subtitle}</p>
         </div>
-        <div className="flex items-center gap-2">
-          <IntelResyncButton onDone={() => setRefreshKey((k) => k + 1)} />
-          <div className="relative w-full lg:w-64">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
-          <input
-            type="text"
-            placeholder="Search Adobe, LinkedIn..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="input-field pl-10"
-          />
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+          {activeTab === 'hibp' && <IntelResyncButton onDone={() => setRefreshKey((k) => k + 1)} />}
+          <div className="relative w-full sm:w-64">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
+            <input
+              type="search"
+              placeholder={t.threatIntel.searchPlaceholder}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="input-field pl-10"
+              disabled={activeTab === 'cert'}
+            />
           </div>
         </div>
       </div>
 
+      <div className="flex bg-surface-muted p-1 rounded-xl w-full sm:w-fit border border-border">
+        {(['hibp', 'cert'] as const).map((tab) => (
+          <button
+            key={tab}
+            type="button"
+            onClick={() => setActiveTab(tab)}
+            className={cn(
+              'flex-1 sm:flex-none px-4 py-2 text-sm font-semibold rounded-lg transition-all',
+              activeTab === tab ? 'bg-surface text-text shadow-sm' : 'text-text-muted hover:text-text',
+            )}
+          >
+            {tab === 'hibp' ? 'HIBP Breaches' : 'CERT-In Advisories'}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === 'cert' ? (
+        <CertAdvisoriesPanel />
+      ) : (
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-primary" />
-              <h2 className="text-lg font-bold text-text">Latest Intelligence Records</h2>
+              <h2 className="text-lg font-bold text-text">{t.threatIntel.latestRecords}</h2>
             </div>
             <span className="text-xs font-mono text-text-muted">
               {filtered.length} records
@@ -212,7 +237,7 @@ const LegalIntelligence: React.FC = () => {
           <div className="card">
             <div className="flex items-center gap-2 mb-4">
               <BookOpen className="w-5 h-5 text-primary" />
-              <h2 className="font-bold text-text">Compliance Frameworks</h2>
+              <h2 className="font-bold text-text">{t.threatIntel.compliance}</h2>
             </div>
             <div className="space-y-3">
               {[
@@ -233,7 +258,7 @@ const LegalIntelligence: React.FC = () => {
             </div>
           </div>
 
-          <div className="card bg-gradient-to-br from-primary/5 to-orange-50 border-primary/10">
+          <div className="card bg-gradient-to-br from-primary/5 to-orange-50 dark:from-primary/10 dark:to-surface border-primary/10">
             <ShieldCheck className="w-8 h-8 text-primary mb-3" />
             <h3 className="font-bold text-text mb-2">How to demo live data</h3>
             <p className="text-sm text-text-muted leading-relaxed">
@@ -242,10 +267,11 @@ const LegalIntelligence: React.FC = () => {
           </div>
         </div>
       </div>
+      )}
 
-      {selected && (
+      {selected && activeTab === 'hibp' && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6">
+          <div className="bg-surface rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 border border-border">
             <div className="flex items-start justify-between mb-4">
               <div>
                 <p className="text-xs font-bold text-primary uppercase">{selected.Domain}</p>

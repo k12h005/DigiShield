@@ -9,37 +9,42 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ThemeToggle from '../components/ThemeToggle';
+import LanguageSelector from '../components/LanguageSelector';
+import { useI18n } from '../i18n';
 
 const LandingPage: React.FC = () => {
+  const { t } = useI18n();
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between border-b border-gray-100">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between border-b border-border gap-3">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center shrink-0">
             <ShieldCheck className="text-white w-5 h-5" />
           </div>
-          <span className="font-bold text-xl text-text tracking-tight">DigiShield</span>
+          <span className="font-bold text-lg sm:text-xl text-text tracking-tight truncate">{t.app.name}</span>
         </div>
         
         <div className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-text-muted hover:text-text font-medium transition-colors">Features</a>
-          <a href="#solutions" className="text-text-muted hover:text-text font-medium transition-colors">Solutions</a>
-          <a href="#about" className="text-text-muted hover:text-text font-medium transition-colors">About</a>
+          <a href="#features" className="text-text-muted hover:text-text font-medium transition-colors">{t.landing.features}</a>
+          <a href="#solutions" className="text-text-muted hover:text-text font-medium transition-colors">{t.landing.solutions}</a>
+          <a href="#about" className="text-text-muted hover:text-text font-medium transition-colors">{t.landing.about}</a>
         </div>
 
-        <div className="flex items-center gap-4">
-          <Link to="/login" className="px-4 py-2 text-text font-medium hover:text-primary transition-colors">
-            Login
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <LanguageSelector compact className="hidden sm:flex" />
+          <ThemeToggle />
+          <Link to="/login" className="hidden sm:inline px-4 py-2 text-text font-medium hover:text-primary transition-colors">
+            {t.landing.login}
           </Link>
-          <Link to="/signup" className="btn-primary">
-            Get Started
+          <Link to="/signup" className="btn-primary text-sm sm:text-base px-3 sm:px-4">
+            {t.landing.getStarted}
           </Link>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <header className="max-w-7xl mx-auto px-6 pt-24 pb-20 text-center">
+      <header className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-16 sm:pb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,21 +52,21 @@ const LandingPage: React.FC = () => {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
             <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-            Real-time Breach Monitoring
+            {t.app.tagline}
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-text mb-8 leading-tight">
-            Protect Your Identity with <br />
-            <span className="text-primary">Intelligence and Law</span>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-text mb-6 sm:mb-8 leading-tight text-balance">
+            {t.landing.heroTitle} <br />
+            <span className="text-primary">{t.landing.heroHighlight}</span>
           </h1>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto mb-10">
-            A comprehensive platform for citizens, legal professionals, and government officials to monitor data breaches and manage cyber intelligence.
+          <p className="text-lg sm:text-xl text-text-muted max-w-2xl mx-auto mb-10">
+            {t.landing.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/signup" className="btn-primary flex items-center gap-2 text-lg px-8 py-4">
-              Start Free Monitoring <ArrowRight className="w-5 h-5" />
+            <Link to="/signup" className="btn-primary flex items-center gap-2 text-lg px-8 py-4 w-full sm:w-auto justify-center">
+              {t.landing.startMonitoring} <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/legal" className="px-8 py-4 border border-gray-200 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors">
-              Access Legal Resources
+            <Link to="/legal" className="px-8 py-4 border border-border rounded-lg text-lg font-medium hover:bg-surface-muted transition-colors w-full sm:w-auto text-center">
+              {t.landing.legalResources}
             </Link>
           </div>
         </motion.div>
@@ -73,7 +78,7 @@ const LandingPage: React.FC = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-20 relative px-4"
         >
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 max-w-5xl mx-auto overflow-hidden">
+          <div className="bg-surface rounded-2xl shadow-2xl border border-border p-4 max-w-5xl mx-auto overflow-hidden">
              <div className="h-4 flex items-center gap-2 mb-4 border-b border-gray-50 pb-4">
                 <div className="w-3 h-3 rounded-full bg-red-100"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-100"></div>

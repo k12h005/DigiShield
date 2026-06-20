@@ -6,7 +6,7 @@ from fastapi.responses import JSONResponse
 from app.config import settings
 from app.database import Base, SessionLocal, engine
 from app.models import AuditLog
-from app.routers import alerts, assets, auth, breaches, intelligence
+from app.routers import alerts, assets, auth, breaches, intelligence, reports
 from app.services.asset_service import rescan_all_assets
 from app.services.hibp_sync import sync_breaches
 
@@ -14,7 +14,7 @@ scheduler = BackgroundScheduler()
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="DigiShield API", version="2.0.0")
+    app = FastAPI(title="DigiShield API", version="2.0.0", redirect_slashes=False)
 
     app.add_middleware(
         CORSMiddleware,
@@ -70,6 +70,7 @@ def create_app() -> FastAPI:
     app.include_router(alerts.router, prefix="/api/alerts", tags=["alerts"])
     app.include_router(breaches.router, prefix="/api/breaches", tags=["breaches"])
     app.include_router(intelligence.router, prefix="/api/intelligence", tags=["intelligence"])
+    app.include_router(reports.router, prefix="/api/reports", tags=["reports"])
 
     @app.get("/")
     def root():

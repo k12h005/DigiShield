@@ -19,10 +19,10 @@ def build_alert_payload(breach, asset_display: str) -> dict:
         "asset_display": asset_display,
         "source": breach.title,
         "severity": risk["severity"],
-        "risk_score": r"scisk[ore"],
+        "risk_score": risk["score"],
         "date": breach.breach_date or "",
         "exposed_data_types": data_classes,
         "recommendations": recommendations,
         "legal_guidance": legal_guidance,
-        "description": breach.description or "",    
+        "description": breach.description or "",
     }

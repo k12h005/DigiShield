@@ -13,7 +13,7 @@ from app.services.hibp_sync import (
 router = APIRouter()
 
 
-@router.get("/")
+@router.get("")
 def get_all_breaches(db: Session = Depends(get_db)):
     breaches = db.query(Breach).order_by(Breach.breach_date.desc().nullslast()).all()
     return [breach_to_hibp_shape(b) for b in breaches]

@@ -9,20 +9,22 @@ from app.services import asset_service
 router = APIRouter()
 
 
-@router.get("/")
+@router.get("")
 def get_assets(user=Depends(get_current_user), db: Session = Depends(get_db)):
     return asset_service.list_assets(db, user.id)
 
 
-@router.post("/", status_code=201)
+@router.post("", status_code=201)
 def create_asset(
     payload: AssetCreateRequest,
     user=Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    asset_service.create_asset(db, user.id, payload.type, payload.value)
-    assets = asset_service.list_assets(db, user.id)
-    return assets[0]
+    try:
+        asset = asset_service.create_asset(db, user.id, payload.type, payload.value)
+        return asset_service.asset_to_dict(asset, db)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
 
 
 @router.delete("/{asset_id}", status_code=status.HTTP_204_NO_CONTENT)

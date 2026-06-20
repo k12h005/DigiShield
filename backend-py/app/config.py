@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    port: int = 5000
+    port: int = 8000
     node_env: str = "development"
     jwt_secret: str = "hackathon_secret_key"
     jwt_algorithm: str = "HS256"

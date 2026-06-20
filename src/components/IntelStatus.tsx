@@ -29,9 +29,9 @@ const IntelStatus = ({ className }: { className?: string }) => {
     <div className={cn('hidden md:flex items-center gap-2 font-mono text-[11px] text-text-muted', className)}>
       <span className={cn('inline-block w-1.5 h-1.5 rounded-full', live ? 'bg-emerald-500' : 'bg-amber-500')} />
       <span>{live ? 'HIBP' : 'CORPUS'}</span>
-      <span className="text-gray-300">|</span>
+      <span className="text-border">|</span>
       <span>{status.breachCount.toLocaleString()} records</span>
-      <span className="text-gray-300">|</span>
+      <span className="text-border">|</span>
       <span>sync {synced}</span>
     </div>
   );
